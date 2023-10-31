@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bubble {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            position: absolute;
+        }
+
+        .bubble:nth-child(2) { left: 50px; top: 100px; }
+        .bubble:nth-child(3) { left: 200px; top: 100px; }
+        .bubble:nth-child(4) { left: 75px; top: 200px; }
+        .bubble:nth-child(5) { left: 175px; top: 200px; }
+        .bubble:nth-child(6) { left: 275px; top: 200px; }
+
+        .tree {
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tree">
+            <div class="bubble">A</div>
+            <div class="bubble">B</div>
+            <div class="bubble">C</div>
+            <div class="bubble">D</div>
+            <div class="bubble">E</div>
+            <div class="bubble">F</div>
+        </div>
+    </div>
+</body>
+</html>
