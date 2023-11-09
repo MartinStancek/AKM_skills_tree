@@ -4,11 +4,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: lightgray;
         }
 
         .container {
-            max-width: 800px;
+            /*margin: 0 auto;*/
+            /*padding: 5px;*/
+            background-color: lightgray;
+            border: 1px solid black;
+            /*border-radius: 0px;*/
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+            text-align: center;
+            display: inline-block;
+
+        }
+
+        .root {
+            width: 300px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
@@ -17,39 +29,130 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .bubble {
-            width: 150px;
-            height: 150px;
-            background-color: #3498db;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 100px;
-            font-size: 20px;
-            position: absolute;
-        }
-
-        .bubble:nth-child(2) { left: 50px; top: 100px; }
-        .bubble:nth-child(3) { left: 200px; top: 100px; }
-        .bubble:nth-child(4) { left: 75px; top: 200px; }
-        .bubble:nth-child(5) { left: 175px; top: 200px; }
-        .bubble:nth-child(6) { left: 275px; top: 200px; }
-
         .tree {
             position: relative;
             text-align: center;
+            border-bottom: 10px;
+            display: inline-block;
+            margin: 10px;
+            margin-top: 50px;
+            vertical-align: top;
+            border: 1px solid black;
+
+
+        }
+
+        .childs {
+            flex: 1 1 30%;
+            display: flex;
+
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="tree">
-            <div class="bubble">A</div>
-            <div class="bubble">B</div>
-            <div class="bubble">C</div>
-            <div class="bubble">D</div>
-            <div class="bubble">E</div>
-            <div class="bubble">F</div>
+            <div class="root"> Reakcia </div>
+            <div class="childs"> 
+                <div class="tree">
+                    <div class="root"> Emócie a atmosféra diskusie </div>
+                    <div class="childs"> 
+                        <div class="tree">
+                            <div class="root"> Nekonfliktná komunikácia </div>
+                            <div class="childs"> 
+                                <div class="tree">
+                                    <div class="root"> Rozpoznať manipuláciu </div>
+                                    <div class="childs"> 
+                                        <div class="tree">
+                                            <div class="root"> Zmierňovanie </div>
+                                        </div>
+                                        <div class="tree">
+                                            <div class="root"> Konštruktívna reakcia na manipuláciu </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tree">
+                                    <div class="root"> Nastavenie bezpečnej atmosféry </div>
+                                    <div class="childs"> 
+                                        <div class="tree">
+                                            <div class="root"> Skrotenie býka </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree">
+                            <div class="root"> Pýtanie sa otvorených otázok </div>
+                            <div class="childs"> 
+                                <div class="tree">
+                                    <div class="root"> Práca s motiváciou </div>
+                                </div>
+                                <div class="tree">
+                                    <div class="root"> Aktívne počúvanie </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree">
+                            <div class="root"> Hodnotové spory </div>
+                            <div class="childs"> 
+                                <div class="tree">
+                                    <div class="root"> Zvládanie emócii v konverzácii </div>
+                                </div>
+                                <div class="tree">
+                                    <div class="root"> Zvládanie náročného hodnotového dialógu </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tree">
+                    <div class="root"> Štruktúra reakcie </div>
+                    <div class="childs"> 
+                        <div class="tree">
+                            <div class="root"> Sumarizácia </div>
+                            <div class="childs"> 
+                                <div class="tree">
+                                    <div class="root"> Práca s viacerými premennými v komunikácii </div>
+                                    <div class="childs"> 
+                                        <div class="tree">
+                                            <div class="root"> Vyjednávanie s viacerými aktérmi </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tree">
+                                    <div class="root"> Identifikácia dôležitých bodov </div>
+                                    <div class="childs"> 
+                                        <div class="tree">
+                                            <div class="root"> Improvizácia v reakcii </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tree">
+                            <div class="root"> Efektívne zamierenie argumentov </div>
+                            <div class="childs"> 
+                                <div class="tree">
+                                    <div class="root"> Identifikácia pozícii, hodnôt, cieľov partnera v komunikácii </div>
+                                    <div class="childs"> 
+                                        <div class="tree">
+                                            <div class="root"> Vyjednávacie stratégie </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tree">
+                                    <div class="root"> Analýza kontextu </div>
+                                    <div class="childs"> 
+                                        <div class="tree">
+                                            <div class="root"> Rozoznávanie dôležitých súvislostí </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
