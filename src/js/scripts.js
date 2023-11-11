@@ -64,5 +64,12 @@ function loadResource(path){
 		console.error(`request to ${path} failed with http status ${request.status}`)
 	}
 	return request.responseText;
-	
+}
+
+function markStar(element){
+	if(element.style["background-color"] == "white"){
+		element.style["background-color"] = "yellow"
+	} else {
+		element.style["background-color"] = "white"
+	}
 }

@@ -16,13 +16,47 @@ body {
 }
 
 .root {
-    width: 300px;
+    position: relative;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+
+}
+
+.root-name {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.root-icons {
+    position: absolute;
+    bottom: 0;
+    display: flow;
+/*    border: 1px solid black;*/
+    height: 40px;
+    text-align: left;
+
+    width: 100%; 
+
+}
+
+.root-star {
+    float: left;
+    max-width: 40px;
+    cursor: pointer;
+}
+.root-info {
+    float: right;
+    max-width: 40px;
+    cursor: pointer;
+
 }
 
 .tree {
@@ -43,3 +77,4 @@ body {
     display: flex;
 
 }
+
