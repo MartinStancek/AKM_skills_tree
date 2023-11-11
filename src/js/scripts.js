@@ -1,5 +1,31 @@
 includeHTML();
 
+var treeStructure = document.getElementById("tree-structrure-content");
+
+let linesSvg = document.getElementById("connector-lines").firstChild;
+linesSvg.setAttribute("height", treeStructure.getBoundingClientRect().bottom);
+linesSvg.setAttribute("width", treeStructure.getBoundingClientRect().right);
+
+resolveLines(treeStructure.firstElementChild);
+
+function resolveLines(tree){
+	let from = tree.firstElementChild.getBoundingClientRect();
+	for(let child of tree.lastElementChild.children){
+		let to = child.firstElementChild.getBoundingClientRect();
+		var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
+		newLine.setAttribute('id','line2');
+		newLine.setAttribute('x1',(from.right+from.left)/2);
+		newLine.setAttribute('y1',from.bottom);
+		newLine.setAttribute('x2',(to.right+to.left)/2);
+		newLine.setAttribute('y2',to.top);
+		newLine.setAttribute("stroke", "black")
+		linesSvg.append(newLine);
+		resolveLines(child);
+
+	}
+
+}
+
 function includeHTML() {
 	var z, i, elmnt, file, xhttp;
 	/* Loop through a collection of all HTML elements: */
@@ -46,6 +72,7 @@ function generateTreeRecursive(parent, plainTemplate){
 	if(!parent.childs){
 		htmlTemplate.body;
 	}
+
 	let childs = htmlTemplate.body.getElementsByClassName("childs")[0];
 	for (var item of parent.childs) {
 		childs.appendChild(generateTreeRecursive(item, plainTemplate));
@@ -73,3 +100,4 @@ function markStar(element){
 		element.style["background-color"] = "white"
 	}
 }
+
