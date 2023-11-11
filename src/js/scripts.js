@@ -94,10 +94,11 @@ function loadResource(path){
 }
 
 function markStar(element){
-	if(element.style["background-color"] == "white"){
+	console.log(element.style["background-color"])
+	if(element.style["background-color"] == ""){
 		element.style["background-color"] = "yellow"
 	} else {
-		element.style["background-color"] = "white"
+		element.style["background-color"] = ""
 	}
 }
 

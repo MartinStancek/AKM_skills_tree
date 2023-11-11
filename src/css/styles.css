@@ -12,6 +12,8 @@ body {
     /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
     text-align: center;
     display: inline-block;
+    z-index: 1;
+
 
 }
 
@@ -44,18 +46,28 @@ body {
     text-align: left;
 
     width: 100%; 
+    margin-bottom: 3px;
 
 }
 
 .root-star {
     float: left;
-    max-width: 40px;
+    border: 0;
+    padding: 0;
     cursor: pointer;
+    margin-left: 3px;
+    border-radius: 20px;
+    background-color: unset;
+
 }
 .root-info {
     float: right;
     max-width: 40px;
     cursor: pointer;
+    margin-right: 3px;
+    border: 0;
+    padding: 0;
+    background-color: unset;
 
 }
 
@@ -79,7 +91,7 @@ body {
 }
 
 
-#connector-lines{
+#connector-lines {
     top: 0;
     left: 0;
     position: absolute;/*
@@ -88,7 +100,10 @@ body {
     right: 0; 
     bottom: 0;
     margin: auto; */
-    width: max-content
+    width: max-content;
+}
 
-
+#tree-structrure-content {
+    position: relative;
+    z-index: 1;
 }
