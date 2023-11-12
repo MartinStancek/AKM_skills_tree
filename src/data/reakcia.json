@@ -1,18 +1,20 @@
 [
   {
     "name": "Reakcia",
+    "root": true,
+    "description":"Reakcia v diskusii je zručnosťou kritického myslenia, ktorá zahŕňa schopnosť dôkladne a premyslene odpovedať na názory, argumenty alebo otázky. Táto schopnosť vyžaduje aktívne počúvanie, hlbokú analýzu a následnú tvorbu informovaných a racionálnych odpovedí, čo umožňuje účastníkom diskusie konštruktívne prispievať k rozvoju myšlienok a viesť zmysluplnejšie rozhovory.",
     "childs": [
       "Emócie a atmosféra diskusie",
       "Štruktúra reakcie"
-    ],
-    "root": true
+    ]
   },
   {
     "name": "Emócie a atmosféra diskusie",
+    "description": "Kontrola nad vlastnými emóciami vytvára pozitívnu a konštruktívnu atmosféru. Emocionálna inteligencia a schopnosť porozumenia rôznym perspektívam podporujú otvorenú komunikáciu a chránia nás pred neproduktívnym konfliktom. Kombinácia týchto faktorov umožňuje vytvárať priestor pre konštruktívnu výmenu a rast v diskusii.",
     "childs": [
       "Nekonfliktná komunikácia",
       "Pýtanie sa otvorených otázok",
-      "Hodnotové spory",
+      "Hodnotové spory"
     ]
   },
   {
@@ -45,6 +47,7 @@
   },
   {
     "name": "Sumarizácia",
+    "description": "Táto schopnosť nás povzbudzuje byť efektívnymi komunikátormi, ktorí dokážu jasne a stručne vyjadriť podstatu informácií a myšlienok, čím posilňuje našu schopnosť analyzovať, hodnotiť a presne komunikovať. Sumarizácia si vyžaduje schopnosť extrahovať základné body z komplexných informácií a sústrediť sa na ich esenciálnu časť. Osvojenie si tejto zručnosti vedie k tomu, že druhá strana sa cíti vypočutá, rešpektovaná a pochopená, čo vedie k zdravej komunikačnej atmosfére.",
     "childs": [
       "Práca s viacerými premennými v komunikácii",
       "Identifikácia dôležitých bodov"

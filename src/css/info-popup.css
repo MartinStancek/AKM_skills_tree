@@ -17,11 +17,11 @@
   z-index: 9;
 }
 
-.info-popup-name {
+#info-popup-name {
   font-size: 30px;
 }
 
-.info-popup-popis {
+#info-popup-popis {
   padding-left: 50px;
   padding-right: 50px;
   text-align: left;
