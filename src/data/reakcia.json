@@ -1,114 +1,141 @@
-{
-  "name": "Reakcia",
-  "childs": [
-    {
-      "name": "Emócie a atmosféra diskusie",
-      "childs": [
-        {
-          "name": "Nekonfliktná komunikácia",
-          "childs": [
-            {
-              "name": "Rozpoznať manipuláciu",
-              "childs": [
-                {
-                  "name": "Zmierňovanie",
-                  "childs": []
-                },
-                {
-                  "name": "Konštruktívna reakcia na manipuláciu",
-                  "childs": []
-                }
-              ]
-            },
-            {
-              "name": "Nastavenie bezpečnej atmosféry",
-              "childs": [
-                {
-                  "name": "Skrotenie býka",
-                  "childs": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Pýtanie sa otvorených otázok",
-          "childs": [
-            {
-              "name": "Práca s motiváciou",
-              "childs": []
-            },
-            {
-              "name": "Aktívne počúvanie",
-              "childs": []
-            }
-          ]
-        },
-        {
-          "name": "Hodnotové spory",
-          "childs": [
-            {
-              "name": "Zvládanie emócii v konverzácii",
-              "childs": []
-            },
-            {
-              "name": "Zvládanie náročného hodnotového dialógu",
-              "childs": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Štruktúra reakcie",
-      "childs": [
-        {
-          "name": "Sumarizácia",
-          "childs": [
-            {
-              "name": "Práca s viacerými premennými v komunikácii",
-              "childs": [
-                {
-                  "name": "Vyjednávanie s viacerými aktérmi",
-                  "childs": []
-                }
-              ]
-            },
-            {
-              "name": "Identifikácia dôležitých bodov",
-              "childs": [
-                {
-                  "name": "Improvizácia v reakcii",
-                  "childs": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Efektívne zamierenie argumentov",
-          "childs": [
-            {
-              "name": "Identifikácia pozícii, hodnôt, cieľov partnera v komunikácii",
-              "childs": [
-                {
-                  "name": "Vyjednávacie stratégie",
-                  "childs": []
-                }
-              ]
-            },
-            {
-              "name": "Analýza kontextu",
-              "childs": [
-                {
-                  "name": "Rozoznávanie dôležitých súvislostí",
-                  "childs": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Reakcia",
+    "childs": [
+      "Emócie a atmosféra diskusie",
+      "Štruktúra reakcie"
+    ],
+    "root": true
+  },
+  {
+    "name": "Emócie a atmosféra diskusie",
+    "childs": [
+      "Nekonfliktná komunikácia",
+      "Pýtanie sa otvorených otázok",
+      "Hodnotové spory",
+    ]
+  },
+  {
+    "name": "Štruktúra reakcie",
+    "childs": [
+      "Sumarizácia",
+      "Efektívne zamierenie argumentov"
+    ]
+  },
+  {
+    "name": "Nekonfliktná komunikácia",
+    "childs": [
+      "Rozpoznať manipuláciu",
+      "Nastavenie bezpečnej atmosféry"
+    ]
+  },
+  {
+    "name": "Pýtanie sa otvorených otázok",
+    "childs": [
+      "Práca s motiváciou",
+      "Aktívne počúvanie"
+    ]
+  },
+  {
+    "name": "Hodnotové spory",
+    "childs": [
+      "Zvládanie emócii v konverzácii",
+      "Zvládanie náročného hodnotového dialógu"
+    ]
+  },
+  {
+    "name": "Sumarizácia",
+    "childs": [
+      "Práca s viacerými premennými v komunikácii",
+      "Identifikácia dôležitých bodov"
+    ]
+  },
+  {
+    "name": "Efektívne zamierenie argumentov",
+    "childs": [
+      "Identifikácia pozícii, hodnôt, cieľov partnera v komunikácii",
+      "Analýza kontextu"
+    ]
+  },
+  {
+    "name": "Rozpoznať manipuláciu",
+    "childs": [
+      "Zmierňovanie",
+      "Konštruktívna reakcia na manipuláciu"
+    ]
+  },
+  {
+    "name": "Nastavenie bezpečnej atmosféry",
+    "childs": [
+      "Skrotenie býka"
+    ]
+  },
+  {
+    "name": "Práca s motiváciou",
+    "childs": []
+  },
+  {
+    "name": "Aktívne počúvanie",
+    "childs": []
+  },
+  {
+    "name": "Zvládanie emócii v konverzácii",
+    "childs": []
+  },
+  {
+    "name": "Zvládanie náročného hodnotového dialógu",
+    "childs": []
+  },
+  {
+    "name": "Práca s viacerými premennými v komunikácii",
+    "childs": [
+      "Vyjednávanie s viacerými aktérmi"
+    ]
+  },
+  {
+    "name": "Identifikácia dôležitých bodov",
+    "childs": [
+      "Improvizácia v reakcii"
+    ]
+  },
+  {
+    "name": "Identifikácia pozícii, hodnôt, cieľov partnera v komunikácii",
+    "childs": [
+      "Vyjednávacie stratégie"
+    ]
+  },
+  {
+    "name": "Analýza kontextu",
+    "childs": [
+      "Rozoznávanie dôležitých súvislostí"
+    ]
+  },
+  {
+    "name": "Zmierňovanie",
+    "childs": []
+  },
+  {
+    "name": "Konštruktívna reakcia na manipuláciu",
+    "childs": []
+  },
+  {
+    "name": "Skrotenie býka",
+    "childs": []
+  },
+  {
+    "name": "Vyjednávanie s viacerými aktérmi",
+    "childs": []
+  },
+  {
+    "name": "Improvizácia v reakcii",
+    "childs": []
+  },
+  {
+    "name": "Vyjednávacie stratégie",
+    "childs": []
+  },
+  {
+    "name": "Rozoznávanie dôležitých súvislostí",
+    "childs": []
+  }
+]

@@ -61,21 +61,23 @@ function includeAttribute(innerHtml){
 function generateTree(){
 	let reakcia = JSON.parse(loadResource("src/data/reakcia.json"))
 	const plainTemplate = loadResource("src/html/node.html");
- 
-	return generateTreeRecursive(reakcia, plainTemplate).innerHTML;
+ 	
+	return generateTreeRecursive(reakcia.filter(function(e){return e.root})[0].name, plainTemplate, reakcia).innerHTML;
 }
 
-function generateTreeRecursive(parent, plainTemplate){
+function generateTreeRecursive(parentName, plainTemplate, data){
 	// console.log("Generating: "+parent.name)
+	let parent = data.filter(function(e){return e.name === parentName})[0];
+	if(!parent) {console.error("Unable to find parent with name "+parentName);}
 	const htmlTemplate = new DOMParser().parseFromString(plainTemplate, "text/html");
 	htmlTemplate.body.innerHTML = htmlTemplate.body.innerHTML.replace("%NAME%", parent.name);
 	if(!parent.childs){
-		htmlTemplate.body;
+		return htmlTemplate.body;
 	}
 
 	let childs = htmlTemplate.body.getElementsByClassName("childs")[0];
-	for (var item of parent.childs) {
-		childs.appendChild(generateTreeRecursive(item, plainTemplate));
+	for (var childName of parent.childs) {
+		childs.appendChild(generateTreeRecursive(childName, plainTemplate, data));
 	}
 
 	return htmlTemplate.body;
