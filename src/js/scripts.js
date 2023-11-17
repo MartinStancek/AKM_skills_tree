@@ -116,9 +116,11 @@ function markStar(element){
 function markStarFromPopUp(element){
 
 	if(element.style["background-color"] == ""){
-		element.style["background-color"] = "yellow"
+		element.style["background-color"] = "yellow";
+		document.getElementById("info-popup-star-button-text").innerHTML = "Vymazať";
 	} else {
-		element.style["background-color"] = ""
+		element.style["background-color"] = "";
+		document.getElementById("info-popup-star-button-text").innerHTML = "Označiť";
 	}
 	const target = element.parentElement.parentElement.getAttribute("target-id");
 
