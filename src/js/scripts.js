@@ -105,7 +105,6 @@ function loadResource(path){
 }
 
 function markStar(element){
-	console.log(element.parentElement.parentElement.style["background-color"])
 	if(element.parentElement.parentElement.style["background-color"] == ""){
 		element.parentElement.parentElement.style["background-color"] = "yellow"
 	} else {
@@ -124,7 +123,6 @@ function markStarFromPopUp(element){
 	}
 	const target = element.parentElement.parentElement.getAttribute("target-id");
 
-	console.log(target);
 	document.getElementById(target).style["background-color"] = element.style["background-color"]
 
 }

@@ -13,9 +13,14 @@ body {
     text-align: center;
     display: inline-block;
     z-index: 1;
-
-
+    float:left;
 }
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+}
+
 
 .root {
     position: relative;
@@ -107,3 +112,12 @@ body {
     position: relative;
     z-index: 1;
 }
+
+#inner-container {
+    float:left;
+    font-size:15px;
+    font-family:arial;
+    padding:10px;
+    cursor: grab;
+}
+

@@ -5,6 +5,7 @@
   background-color: white;
   border: 6px solid black;
   min-height: 600px; /* Need a specific value to work */
+  cursor: auto;
 
 /*  clear: both;*/
 
@@ -31,6 +32,7 @@
   overflow-y:scroll;
   z-index: 10;
   display: none; /*none*/
+  cursor: pointer;
 }
 
 #info-popup-name {
