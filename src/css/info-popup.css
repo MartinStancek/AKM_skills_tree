@@ -58,13 +58,13 @@
   height: 100%;
   cursor: pointer;
   margin-left: 3px;
+  min-width: 180px;
 }
 #info-popup-star-button-text {
 /*  border: 3px solid black;*/
   font-size: 130%;
   font-weight: bold;
   height: 100%;
-  width: 70%;
   text-align: center;
   display: inline-block;
   padding-top: 15px;
