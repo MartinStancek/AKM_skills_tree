@@ -15,7 +15,6 @@
   left: 50%;
   transform: translateX(-50%);
   top: 10%;
-  top: 10%;
   max-width: 600px; /* Need a specific value to work */
 
   padding-left: 10%;
@@ -29,6 +28,7 @@
   right: 0; 
   bottom: 0;
   position: fixed;
+  overflow-y:scroll;
   z-index: 10;
   display: none; /*none*/
 }
@@ -44,6 +44,9 @@
   padding-left: 10%;
   padding-right: 10%;
   text-align: left;
+}
+.info-popup-popis-div {
+  margin-bottom: 2%;
 }
 
 .popup-close {

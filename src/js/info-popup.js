@@ -6,8 +6,9 @@ function openInfoPopup(element) {
   document.getElementById("connector-lines").style.filter = "blur(6px)";
 
   targetNode = reakcia.filter(function(e){return e.name === element.parentElement.parentElement.id.replace(/-/g, " ")})[0];
+  let description = (targetNode.description ? targetNode.description : "").split("\n").map(e=>`<div class="info-popup-popis-div">${e}</div>`).join('');
   document.getElementById("info-popup-name").innerHTML = targetNode.name;
-  document.getElementById("info-popup-popis").innerHTML = targetNode.description ? targetNode.description : "";
+  document.getElementById("info-popup-popis").innerHTML = description;
 
 }
 
