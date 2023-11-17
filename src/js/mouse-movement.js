@@ -4,7 +4,7 @@ const slider = document.querySelector('#container');
 
 const startDragging = (e) => {
   const target = e.srcElement.className || e.srcElement.id;
-  if(target.match(/popup/)) return;
+  if(target.match(/popup/) || isRoot(e.srcElement)) return;
   mouseDown = true;
   startX = e.pageX - slider.offsetLeft;
   startY = e.pageY - slider.offsetTop;
@@ -33,3 +33,11 @@ slider.addEventListener('mousemove', move, false);
 slider.addEventListener('mousedown', startDragging, false);
 slider.addEventListener('mouseup', stopDragging, false);
 slider.addEventListener('mouseleave', stopDragging, false);
+
+
+function isRoot(element){
+  if(!element){
+    return false;
+  }
+  return element.className == 'root' || isRoot(element.parentElement);
+}
