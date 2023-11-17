@@ -1,6 +1,5 @@
 document.querySelector('#close-popup-area').onclick = closeInfoPopup;
 
-
 function openInfoPopup(element) {
   document.getElementById("close-popup-area").style.display = "block";
   document.getElementById("tree-structrure-content").style.filter = "blur(6px)";
@@ -22,3 +21,4 @@ function closeInfoPopup(event) {
   document.getElementById("connector-lines").style.filter = "none";
 
 }
+

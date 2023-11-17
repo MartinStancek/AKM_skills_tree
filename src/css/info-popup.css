@@ -2,20 +2,27 @@
 /* The popup form - hidden by default */
 .info-popup {
   display: block; /*none*/
-  padding: 10px;
   background-color: white;
   border: 6px solid black;
+  min-height: 600px; /* Need a specific value to work */
+
+/*  clear: both;*/
+
+
+}
+.info-popup-padding{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: 15%;
-
-
+  top: 10%;
+  top: 10%;
   max-width: 600px; /* Need a specific value to work */
-  min-height: 600px; /* Need a specific value to work */
-  clear: both;
+
+  padding-left: 10%;
+  padding-right: 10%;
   z-index: 15;
 }
+
 #close-popup-area {
   top: 0;
   left: 0; 
@@ -27,12 +34,15 @@
 }
 
 #info-popup-name {
-  font-size: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 200%;
+  text-align: center;
 }
 
 #info-popup-popis {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
   text-align: left;
 }
 
@@ -41,8 +51,8 @@
     border: 0;
     padding: 0;
     cursor: pointer;
-    margin-left: 3px;
-    border-radius: 20px;
+    padding-top: 1%;
+    padding-right: 1%;
     background-color: unset;
 
 }
