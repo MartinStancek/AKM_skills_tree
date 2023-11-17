@@ -12,7 +12,7 @@ function openInfoPopup(element) {
 }
 
 function closeInfoPopup(event) {
-  if(event && event.srcElement.id != 'close-popup-area') {
+  if(event && (event.srcElement.id != 'close-popup-area' && event.srcElement.id != 'info-popup-padding')) {
     return;
   }
 

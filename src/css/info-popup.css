@@ -10,7 +10,7 @@
 
 
 }
-.info-popup-padding{
+#info-popup-padding{
   position: relative;
   left: 50%;
   transform: translateX(-50%);

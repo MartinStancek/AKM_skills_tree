@@ -3,13 +3,17 @@ const reakcia = JSON.parse(loadResource("src/data/reakcia.json"))
 
 includeHTML();
 
+
 var treeStructure = document.getElementById("tree-structrure-content");
 
 let linesSvg = document.getElementById("connector-lines").firstChild;
-linesSvg.setAttribute("height", treeStructure.getBoundingClientRect().bottom);
-linesSvg.setAttribute("width", treeStructure.getBoundingClientRect().right);
+linesSvg.setAttribute("height", treeStructure.getBoundingClientRect().bottom+window.pageYOffset);
+linesSvg.setAttribute("width", treeStructure.getBoundingClientRect().right+window.pageXOffset);
+
+
 
 resolveLines(treeStructure.firstElementChild);
+
 
 function resolveLines(tree){
 	let from = tree.firstElementChild.getBoundingClientRect();
@@ -17,10 +21,10 @@ function resolveLines(tree){
 		let to = child.firstElementChild.getBoundingClientRect();
 		var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
 		newLine.setAttribute('id','line2');
-		newLine.setAttribute('x1',(from.right+from.left)/2);
-		newLine.setAttribute('y1',from.bottom);
-		newLine.setAttribute('x2',(to.right+to.left)/2);
-		newLine.setAttribute('y2',to.top);
+		newLine.setAttribute('x1',(from.right+window.pageXOffset+from.left+window.pageXOffset)/2);
+		newLine.setAttribute('y1',from.bottom+window.pageYOffset);
+		newLine.setAttribute('x2',(to.right+window.pageXOffset+to.left+window.pageXOffset)/2);
+		newLine.setAttribute('y2',to.top+window.pageYOffset);
 		newLine.setAttribute("stroke", "black")
 		linesSvg.append(newLine);
 		resolveLines(child);
