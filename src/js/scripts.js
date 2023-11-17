@@ -105,11 +105,25 @@ function loadResource(path){
 }
 
 function markStar(element){
-	console.log(element.style["background-color"])
+	console.log(element.parentElement.parentElement.style["background-color"])
+	if(element.parentElement.parentElement.style["background-color"] == ""){
+		element.parentElement.parentElement.style["background-color"] = "yellow"
+	} else {
+		element.parentElement.parentElement.style["background-color"] = ""
+	}
+}
+
+function markStarFromPopUp(element){
+
 	if(element.style["background-color"] == ""){
 		element.style["background-color"] = "yellow"
 	} else {
 		element.style["background-color"] = ""
 	}
+	const target = element.parentElement.parentElement.getAttribute("target-id");
+
+	console.log(target);
+	document.getElementById(target).style["background-color"] = element.style["background-color"]
+
 }
 

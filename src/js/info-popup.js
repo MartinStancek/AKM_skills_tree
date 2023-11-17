@@ -4,6 +4,8 @@ function openInfoPopup(element) {
   document.getElementById("close-popup-area").style.display = "block";
   document.getElementById("tree-structrure-content").style.filter = "blur(6px)";
   document.getElementById("connector-lines").style.filter = "blur(6px)";
+  document.getElementById("info-popup-star-button").style["background-color"] = element.parentElement.parentElement.style["background-color"];
+  document.getElementById("popupInfo").setAttribute("target-id", element.parentElement.parentElement.id)
 
   targetNode = reakcia.filter(function(e){return e.name === element.parentElement.parentElement.id.replace(/-/g, " ")})[0];
   let description = (targetNode.description ? targetNode.description : "").split("\n").map(e=>`<div class="info-popup-popis-div">${e}</div>`).join('');
