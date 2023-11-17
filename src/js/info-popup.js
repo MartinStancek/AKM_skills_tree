@@ -14,6 +14,8 @@ function openInfoPopup(element) {
   document.getElementById("connector-lines").style.filter = "blur(6px)";
   document.getElementById("info-popup-star-button").style["background-color"] = element.style["background-color"];
   document.getElementById("popupInfo").setAttribute("target-id", element.id)
+  document.getElementById("info-popup-star-button-text").innerHTML =element.style["background-color"] == "" ? "Označiť" : "Vymazať";
+
 
   targetNode = reakcia.filter(function(e){return e.name === element.id.replace(/-/g, " ")})[0];
   let description = (targetNode.description ? targetNode.description : "").split("\n").map(e=>`<div class="info-popup-popis-div">${e}</div>`).join('');
