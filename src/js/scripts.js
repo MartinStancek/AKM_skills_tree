@@ -107,23 +107,28 @@ function loadResource(path){
 function markStar(element){
 	if(element.parentElement.parentElement.style["background-color"] == ""){
 		element.parentElement.parentElement.style["background-color"] = "yellow"
+		element.firstElementChild.setAttribute("src", "src/images/star-active.png");
 	} else {
 		element.parentElement.parentElement.style["background-color"] = ""
+		element.firstElementChild.setAttribute("src", "src/images/star.png");
 	}
 }
 
 function markStarFromPopUp(element){
+	const target = element.parentElement.parentElement.getAttribute("target-id");
 
 	if(element.style["background-color"] == ""){
 		element.style["background-color"] = "yellow";
 		document.getElementById("info-popup-star-button-text").innerHTML = "Vymazať";
+		document.getElementById(target).lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
 	} else {
 		element.style["background-color"] = "";
 		document.getElementById("info-popup-star-button-text").innerHTML = "Označiť";
+		document.getElementById(target).lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star.png");
 	}
-	const target = element.parentElement.parentElement.getAttribute("target-id");
 
 	document.getElementById(target).style["background-color"] = element.style["background-color"]
+
 
 }
 
