@@ -1,4 +1,7 @@
 document.querySelector('#close-popup-area').onclick = closeInfoPopup;
+for(var e of document.getElementsByClassName('root')){
+  e.onclick = openInfoPopup
+}
 
 function openInfoPopup(element) {
   if(element.srcElement.parentElement.className == "root-star") return;
@@ -30,4 +33,4 @@ function closeInfoPopup(event) {
 
 }
 
-document.querySelector('.root').onclick = openInfoPopup;
+
