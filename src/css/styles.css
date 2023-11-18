@@ -28,14 +28,11 @@ body {
     height: 150px;
     margin: 0 auto;
     padding: 0;
-    font-family: Quicksand;
     background-color: #fff;
 /*    border: 1px solid #ccc;*/
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: block;
-    color:black;
-    font-weight:600;
     cursor: pointer;
 
 }
@@ -44,6 +41,10 @@ body {
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    font-family: Quicksand;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
 }
 
 .root-icons {
