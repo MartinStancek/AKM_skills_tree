@@ -52,7 +52,7 @@ body {
     bottom: 0;
     display: flow;
 /*    border: 1px solid black;*/
-    height: 30px;
+    height: 40px;
     text-align: left;
 
     width: 100%; 
@@ -73,7 +73,7 @@ body {
 }
 .root-info {
     float: right;
-    max-width: 30px;
+    max-width: 40px;
     cursor: pointer;
     margin-right: 10px;
     border: 0;
