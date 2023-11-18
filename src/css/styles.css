@@ -56,7 +56,7 @@ body {
     text-align: left;
 
     width: 100%; 
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     z-index: 2;
 
 }
@@ -66,7 +66,7 @@ body {
     border: 0;
     padding: 0;
     cursor: pointer;
-    margin-left: 3px;
+    margin-left: 10px;
     border-radius: 20px;
     background-color: unset;
 
@@ -75,7 +75,7 @@ body {
     float: right;
     max-width: 40px;
     cursor: pointer;
-    margin-right: 3px;
+    margin-right: 10px;
     border: 0;
     padding: 0;
     background-color: unset;
