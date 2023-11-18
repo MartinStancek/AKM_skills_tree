@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Quicksand;
     background-color: lightgray;
 }
 
@@ -52,7 +52,7 @@ body {
     bottom: 0;
     display: flow;
 /*    border: 1px solid black;*/
-    height: 40px;
+    height: 30px;
     text-align: left;
 
     width: 100%; 
@@ -73,7 +73,7 @@ body {
 }
 .root-info {
     float: right;
-    max-width: 40px;
+    max-width: 30px;
     cursor: pointer;
     margin-right: 10px;
     border: 0;
