@@ -33,7 +33,8 @@ body {
 }
 
 .root {
-    background: radial-gradient(circle, rgba(255,253,208,1) 0%, rgba(255,246,146,1) 100%);
+    background-color: gold;
+/*    background: radial-gradient(circle, rgba(255,253,208,1) 0%, rgba(255,246,146,1) 100%);*/
     position: relative;
     width: 150px;
     height: 150px;
