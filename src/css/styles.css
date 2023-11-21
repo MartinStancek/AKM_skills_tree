@@ -77,8 +77,12 @@ body {
     margin-left: 10px;
     border-radius: 20px;
     background-color: unset;
-
 }
+
+.root-star:hover {
+    transform:scale(1.1);
+}
+
 .root-info {
     float: right;
     max-width: 40px;
