@@ -48,7 +48,7 @@ body {
 }
 
 .root-active {
-    background-color: #DAA520;
+    background: #DAA520;
 /*    background: radial-gradient(circle, rgba(255,246,146,1) 100%, rgba(255,253,208,1) 100%);*/
 }
 
