@@ -35,6 +35,7 @@
   },
   {
     "name": "Pýtanie sa otvorených otázok",
+	"description": "Explorácia a pýtanie sa otvorených otázok sú neoddeliteľnou súčasťou rozvoja kritického myslenia. Táto dispozícia nám umožňuje hlbšie pochopiť a  analyzovať kontext komunikačného partnera. Akt pýtania sa otvorených otázok v komunikácii je ako kľúč, ktorý otvára bránu k objavovaniu nových perspektív, širšiemu porozumeniu a dôkladnej analýze. Vo výsledku nám explorácia a pýtanie sa otvorených otázok umožňujú neustále sa učiť, rásť a rozvíjať náš kritický pohľad na svet.",
     "childs": [
       "Práca s motiváciou",
       "Aktívne počúvanie"
@@ -42,6 +43,7 @@
   },
   {
     "name": "Hodnotové spory",
+	"description": "Hodnotové spory môžu byť vášnivé a emocionálne vypäté. Diskutovanie o týchto témach nám umožňuje chápať rôzne perspektívy a pochopiť, prečo ľudia majú určité hodnoty a presvedčenia. Táto schopnosť je základná pre kritické myslenie, pretože nám umožňuje vyhodnocovať argumenty v kontexte hodnôt a posudzovať ich vzhľadom na rôzne morálne a etické normy. Dôležité je, že riešenie hodnotových sporov vyžaduje otvorenú myseľ a rešpekt voči odlišným názorom. To nás povzbudzuje k hĺbkovej diskusii, kde môžeme klásť otázky a skúmať rôzne stránky sporu. Hodnotové spory sú súčasťou komunikácie a sú nevyhnutné pre rozvoj kritického myslenia -  umožňujú lepšie pochopiť seba samých, iných a svet okolo nás.",
     "childs": [
       "Zvládanie emócii v konverzácii",
       "Zvládanie náročného hodnotového dialógu"
@@ -57,6 +59,7 @@
   },
   {
     "name": "Efektívne zamierenie argumentov",
+	"description": "Táto zručnosť nám umožňuje jasne a presne komunikovať naše myšlienky a presvedčenia, čo je kľúčové pre overovanie, diskusiu a riešenie problémov. Pri efektívnom zamieraní argumentov musíme kriticky zhodnotiť, aké dôkazy a logika podporujú naše stanoviská. Zároveň nás to motivuje byť presnými a konzistentnými v našej komunikácii, čo je dôležité pre racionálnu diskusiu. V rámci komunikačných soft skills je efektívne zamierenie argumentov kľúčové pre budovanie dôvery a rešpektu voči našim komunikačným partnerom. Keď jasne a presne vyjadrujeme naše názory a argumenty, umožňujeme druhým lepšie porozumieť našim perspektívam.",
     "childs": [
       "Identifikácia pozícii, hodnôt, cieľov partnera v komunikácii",
       "Analýza kontextu"
@@ -64,6 +67,7 @@
   },
   {
     "name": "Rozpoznať manipuláciu",
+	"description": "Táto zručnosť nám umožňuje preniknúť za povrchové informácie a rozoznať, keď sú nám prezentované zmanipulované alebo klamlivé tvrdenia.Schopnosť rozpoznať manipuláciu nám umožňuje byť kritickými konzumentmi informácií. Tým, že dokážeme identifikovať manipulatívne taktiky a techniky, môžeme predchádzať tomu, aby sme boli ovplyvnení nežiaducimi presvedčeniami. Zároveň nám to umožňuje otvorenejšie a dôkladnejšie preskúmať rôzne perspektívy a stanoviská. Rozpoznanie manipulácie je teda dôležitým krokom k tomu, aby sme sa stali kritickými a informovanými jednotlivcami, schopnými efektívne reagovať na komplexné situácie a rozhodovať na základe objektívnych dôkazov.",
     "childs": [
       "Zmierňovanie",
       "Konštruktívna reakcia na manipuláciu"
@@ -71,76 +75,92 @@
   },
   {
     "name": "Nastavenie bezpečnej atmosféry",
+	"description": "Nastavenie bezpečnej atmosféry vytvára prostredie, v ktorom jednotlivci môžu slobodne predostrieť svoje názory a vyjadrovať obavy. Vytvorenie bezpečnej atmosféry v komunikácii znamená rešpektovať rôznorodosť názorov. Táto atmosféra dôvery a rešpektu podporuje otvorenú a konštruktívnu komunikáciu, čo je základným predpokladom pre kritické myslenie. Jednotlivci sa cítia povzbudení k výzvam a diskusiám o rôznych názoroch a perspektívach, kladú otázky a hľadajú objektívne odpovede. Zároveň je to aj dôležitým prvkom vo vyvracaní predsudkov a stereotypov, ktoré môžu brániť rozvoju kritického myslenia. ",
     "childs": [
       "Skrotenie býka"
     ]
   },
   {
     "name": "Práca s motiváciou",
+	"description": "Motivácia nás podnecuje k tomu, aby sme sa viac angažovali a kládli trefné otázky. Vhodná práca s motiváciou v konverzácii posilňuje dispozíciu otvorenosti a prehĺbuje naše porozumenie. V procese aktivizácie motivácie umožňujeme našim  partnerom v komunikácii, zaujať aktívny postoj k explorácii vlastného myslenia. Táto motivácia ich povzbudzuje k tomu, aby sa viac angažovali, kládli otázky a vyhľadávali viac informácií, čo sú všetko kritické aspekty analýzy a hodnotenia.",
     "childs": []
   },
   {
     "name": "Aktívne počúvanie",
+	"description": "Aktívne počúvanie je kľúčovým prvkom rozvoja kritického myslenia, pretože nám umožňuje získavať dôležité informácie a lepšie rozumieť perspektívam a argumentom druhých. Táto schopnosť nás povzbudzuje byť pozorní, vnímať jemné nuansy v komunikácii a klásť dôležité otázky. Pri aktívnom počúvaní nejde iba o pasívne vnímanie slov druhých, ale aj o sledovanie neverbálnych signálov, ako sú gestá, mimika a tón hlasu. Tieto aspekty nám poskytujú viac informácií o emóciách a dôvodom, ktoré stojí za výpoveďou druhého človeka. Aktívne počúvanie nám umožňuje racionálne a kriticky odpovedať na informácie, ktoré dostávame, a vytvára priestor na konštruktívnu komunikáciu. Tým, že dokážeme lepšie porozumieť kontextu toho druhého, sme schopní objektívnejšie hodnotiť argumenty a hľadať spoločný základ pre riešenia. Aktívne počúvanie teda posilňuje naše kritické myslenie tým, že nás učí byť kriticky informovaní, otvorení a reflektívny voči ostatným.",
     "childs": []
   },
   {
     "name": "Zvládanie emócii v konverzácii",
+	"description": "Emocionálna inteligencia nám pomáha rozpoznať a porozumieť emóciám nielen u seba samých, ale aj u našich komunikačných partnerov. Tým nám umožňuje porozumieť ich perspektívam, záujmom a potrebám, čo je dôležité pri kritickom hodnotení argumentov a analýze situácií. Taktiež nás povzbudzuje k empatii a rešpektu, čím sa podporuje konštruktívna komunikácia.",
     "childs": []
   },
   {
     "name": "Zvládanie náročného hodnotového dialógu",
+    "description": "Hodnotové diskusie môžu byť emocionálne náročné a kontroverzné, ale ich správne zvládanie posilňuje našu schopnosť kriticky uvažovať. V rámci rozhovorov o hodnotách sa musíme otvorene konfrontovať s rozdielnymi názormi a presvedčeniami. Je teda nevyhnutné byť otvorení a zvážiť rôzne stránky problému. Rovnako dôležité je klásť trefné otázky, analyzovať argumenty a hľadať spoločný kontext. Hodnotové diskusie môžu byť emocionálne náročné a kontroverzné, ale ich správne zvládanie posilňuje našu schopnosť kriticky uvažovať.",
     "childs": []
   },
   {
     "name": "Práca s viacerými premennými v komunikácii",
+	"description": "Práca s viacerými premennými si vyžaduje schopnosť zohľadňovať rôzne faktory, ako sú informácie, perspektívy, a záujmy rôznych ľudí alebo aspekty situácie. Tým nás povzbudzuje k hlbšiemu analyzovaniu a hodnoteniu komplexných situácií, čím podporuje rozvoj kritického myslenia. Vo chvíli keď vieme efektívne komunikovať s ohľadom na rôzne aspekty rozhovoru, dokážeme vytvárať zdravé komunikačné vzťahy.",
     "childs": [
       "Vyjednávanie s viacerými aktérmi"
     ]
   },
   {
     "name": "Identifikácia dôležitých bodov",
+	"description": "Identifikácia dôležitých bodov nás povzbudzuje k hĺbkovej analýze informácií a argumentov, pretože nás motivuje rozpoznať ich podstatu a význam. Týmto spôsobom sa rozvíja naša schopnosť kriticky zhodnocovať informácie a vyberať tie najrelevantnejšie pre riešenie problémov. Keď jasne komunikujeme kľúčové body, umožňujeme druhým lepšie pochopiť naše myšlienky a argumenty.",
     "childs": [
       "Improvizácia v reakcii"
     ]
   },
   {
     "name": "Identifikácia pozícii, hodnôt, cieľov partnera v komunikácii",
-    "childs": [
+    "description": "Keď pochopíme, aké hodnoty a ciele ovplyvňujú názory našich partnerov, môžeme lepšie porovnávať a konfrontovať argumenty. Taktiež nám umožňuje rozpoznať potenciálne obmedzenia a predsudky v komunikácii, čím posilňuje našu schopnosť kriticky posudzovať informácie. V rámci komunikačných soft skills je táto zručnosť dôležitá pre budovanie dôvery a empatie. Keď prejavíme záujem o perspektívy a potreby druhých, budujeme lepšie vzťahy a vytvárame pozitívnu komunikačnú atmosféru. Táto schopnosť nám umožňuje byť lepšími komunikátormi, ktorí rešpektujú a chápu druhých.",
+	"childs": [
       "Vyjednávacie stratégie"
     ]
   },
   {
     "name": "Analýza kontextu",
+	"description": "Analýza kontextu nám pomáha identifikovať potenciálne bariéry a výzvy v komunikácii. Tým nám umožňuje zvoliť vhodný prístup, stratégiu a vytvárať s komunikačným partnerom inkluzívne komunikačné prostredie. Analýza kontextu nám umožňuje rozumieť rôznym perspektívam, kultúram a hodnotovým systémom, čo je nevyhnutné pre efektívnu komunikáciu. Táto schopnosť nás povzbudzuje byť empatickí a rešpektovať odlišné pohľady.",
     "childs": [
       "Rozoznávanie dôležitých súvislostí"
     ]
   },
   {
     "name": "Zmierňovanie",
+	"description": "Deeskalácia v komunikácii umožňuje zachovať pokojné a racionálne prostredie vo vzťahoch a diskusiách. Tým, že dokážeme zmierniť konflikty a emocionálnu napätosť v konverzáciách, môžeme efektívnejšie analyzovať argumenty, zhodnocovať dôkazy a vyvíjať komplexné, kritické stanoviská. Deeskalácia nám pomáha vyhnúť sa príliš emocionálnym reakciám, ktoré by mohli prekryť objektívne hodnotenie, a zároveň podporuje otvorenosť a rešpekt voči odlišným názorom. To zvyšuje našu schopnosť kriticky premýšľať, riešiť problémy a dosahovať vyvážené závery. Deeskalácia nám teda umožňuje vytvárať priestor na reflektovanie, analyzovanie informácií a vyhodnocovanie perspektív, čo je ďalším krokom k rozvoju kritického myslenia.",
     "childs": []
   },
   {
     "name": "Konštruktívna reakcia na manipuláciu",
+	"description": "Konštruktívna reakcia na manipuláciu poskytuje individuálnu ochranu pred klamlivými informáciami a manipulatívnymi taktikami. Táto zručnosť nám pomáha rozpoznať a reagovať tak, aby sme podporili logické a kritické rozmýšľanie. Pri konfrontácii s manipuláciou môžeme analyzovať argumenty, vyhodnocovať dôkazy a klásť otázky, ktoré vedú k lepšiemu pochopeniu situácie. Umožňuje zachovať racionálny prístup v priestore emocionálne manipulatívnych taktík a chrániť našu schopnosť kriticky hodnotiť informácie. V kontexte kritického myslenia nás učí byť obezretnejšími a schopnými rozlíšiť medzi pravdivými a manipulatívnymi tvrdeniami.",
     "childs": []
   },
   {
     "name": "Skrotenie býka",
+	"description": "Emócie môžu byť silnými vplyvmi, ktoré nám môžu brániť v objektívnom hodnotení informácií a argumentov. Ovládanie emócií nám umožňuje zachovať pokojné a rozvážne prostredie v komunikácii, čím sa podporuje nekonfliktná výmena názorov. Taktiež, ovládanie emócií podporuje vytváranie konštruktívnej komunikačnej atmosféry. Keď sme schopní zachovať emocionálnu rovnováhu v komunikácii, vytvárame bezpečný priestor pre otvorenú výmenu názorov a diskusiu. Silná emocionálna reaktivita môže brániť racionálnemu mysleniu a viesť k subjektívnemu vnímaniu situácie. Ovládanie emócií nám pomáha zachovať jasnú hlavu, čo je základným predpokladom pre kritické myslenie.",
     "childs": []
   },
   {
     "name": "Vyjednávanie s viacerými aktérmi",
+	"description": "V rámci mäkkých zručností je vyjednávanie s viacerými aktérmi dôležité pre budovanie dôvery a rešpektu voči rôznym komunikačným partnerom. Keď preukážeme schopnosť počúvať, byť otvorení rôznym názorom a nachádzať konštruktívne riešenia, budujeme zdravé komunikačné vzťahy.",
     "childs": []
   },
   {
     "name": "Improvizácia v reakcii",
+	"description": "Táto schopnosť nás povzbudzuje byť flexibilnými, rýchlymi a zručnými komunikátormi. Improvizácia vyžaduje rýchlu analýzu situácie, adaptáciu na nové informácie a tvorbu riešení na mieste. Musíme okamžite posúdiť situáciu, identifikovať ciele a vybrať najlepší spôsob, ako komunikovať. Rovnako dôležité je, že improvizácia nás povzbudzuje byť kreatívnymi a flexibilnými komunikátormi - umožňuje nám efektívne reagovať na neočakávané situácie, budovať dôveru voči našim komunikačným partnerom a udržiavať konštruktívnu komunikačnú atmosféru.",
     "childs": []
   },
   {
     "name": "Vyjednávacie stratégie",
+	"description": "Tieto stratégie nám umožňujú efektívne riešiť rozdiely, dosahovať dohody a budovať vzťahy s ostatnými ľuďmi. Vyjednávanie si vyžaduje empatiu, aktívne počúvanie a takt, čo sú dôležité atribúty pre efektívnu komunikáciu. Tieto zručnosti nám pomáhajú budovať dôveryhodné vzťahy a riešiť konflikty s rešpektom a diplomaciou.",
     "childs": []
   },
   {
     "name": "Rozoznávanie dôležitých súvislostí",
+	"description": "Keď rozpoznávame dôležité súvislosti, máme schopnosť lepšie porozumieť tomu, ako rôzne informácie a argumenty ovplyvňujú jeden druhého. Taktiež nám to umožňuje rozpoznať potenciálne nedostatky alebo nekonzistencie v argumentoch a informáciách, čo je dôležité pre objektívne a racionálne posudzovanie.  Táto zručnosť nám tiež umožňuje reagovať na otázky a pripomienky s presnosťou a dôveryhodnosťou. Vo všeobecnosti, rozpoznávanie dôležitých súvislostí nám umožňuje rozvíjať našu schopnosť byť objektívnymi, dôveryhodnými a efektívnymi komunikátormi s výbornými kritickými analytickými schopnosťami.",
     "childs": []
   }
 ]
