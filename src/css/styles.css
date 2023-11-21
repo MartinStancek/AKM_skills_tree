@@ -46,6 +46,7 @@ body {
 
 .root:active {
     backgroud:red;
+}
 
 .root-name {
     padding-top: 20px;
