@@ -80,7 +80,8 @@ body {
 }
 
 .root-star:hover {
-    transform:scale(1.1);
+    transform:scale(1.2)
+    transform-duration:0.1s;
 }
 
 .root-info {
