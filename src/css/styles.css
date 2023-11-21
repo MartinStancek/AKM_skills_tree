@@ -1,7 +1,17 @@
 body {
     font-family: Quicksand;
     background: rgb(130,130,130);
-background: radial-gradient(circle, rgba(130,130,130,1) 0%, rgba(69,68,55,1) 100%);
+/*    background: radial-gradient(circle, rgba(130,130,130,1) 0%, rgba(69,68,55,1) 100%);*/
+    animation: color 9s infinite linear;
+}
+
+@keyframes color {
+  0%   { background: #33CCCC; }
+  20%  { background: #33CC36; }
+  40%  { background: #B8CC33; }
+  60%  { background: #FCCA00; }
+  80%  { background: #33CC36; }
+  100% { background: #33CCCC; }
 }
 
 #container {
