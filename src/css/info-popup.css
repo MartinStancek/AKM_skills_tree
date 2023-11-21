@@ -60,7 +60,7 @@
 
 }
 .info-popup-star-button-active {
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,246,146,1) 100%) !important;
+  background: gold;
 }
 
 #info-popup-star-button {
