@@ -60,7 +60,7 @@
 
 }
 .info-popup-star-button-active {
-  background: gold;
+  background-color: #DAA520;
 }
 
 #info-popup-star-button {
@@ -73,6 +73,7 @@
   margin-left: 3px;
   min-width: 180px;
 }
+
 #info-popup-star-button-text {
 /*  border: 3px solid black;*/
   font-size: 130%;
