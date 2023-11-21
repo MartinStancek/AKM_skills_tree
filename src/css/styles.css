@@ -62,7 +62,6 @@ body {
 /*    border: 1px solid black;*/
     height: 40px;
     text-align: left;
-
     width: 100%; 
     margin-bottom: 10px;
     z-index: 2;
@@ -98,6 +97,7 @@ body {
 .root-info:hover {
     transform:scale(1.2);
     transform-duration:0.25s;
+}
 
 .tree {
     position: relative;
