@@ -37,9 +37,6 @@ body {
 
 }
 
-.root:hover {
-    transform: scale(1.1);
-
 .root-name {
     padding-top: 20px;
     padding-left: 10px;
