@@ -6,12 +6,8 @@ body {
 }
 
 @keyframes color {
-  0%   { background: #6e8bb5; }
-  20%  { background: #4287ec; }
-  40%  { background: #2bd6c9; }
-  60%  { background: #10a196; }
-  80%  { background: #289950; }
-  100% { background: #6e8bb5; }
+  0%   { background: #a2a2a2; }
+  50%  { background: #3c3c3c; }
 }
 
 #container {
