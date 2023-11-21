@@ -1,5 +1,9 @@
+@font-face {  
+    src: url(src/fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+}
+
 body {
-    font-family: Quicksand;
+    font-family: Quicksand Fallback, sans-serif;
     background: rgb(130,130,130);
 /*    background: radial-gradient(circle, rgba(130,130,130,1) 0%, rgba(69,68,55,1) 100%);*/
     animation: color 9s infinite radial;
@@ -28,6 +32,9 @@ body {
 .example {
 }
 
+.root-active {
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,246,146,1) 100%) !important;
+}
 
 .root {
     background: radial-gradient(circle, rgba(255,253,208,1) 0%, rgba(255,246,146,1) 100%);

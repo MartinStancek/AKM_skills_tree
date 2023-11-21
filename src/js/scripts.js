@@ -25,7 +25,7 @@ function resolveLines(tree){
 		newLine.setAttribute('y1',from.bottom+window.pageYOffset);
 		newLine.setAttribute('x2',(to.right+window.pageXOffset+to.left+window.pageXOffset)/2);
 		newLine.setAttribute('y2',to.top+window.pageYOffset);
-		newLine.setAttribute("stroke", "black")
+		newLine.setAttribute('style', 'fill:red;stroke:black;stroke-width:5;opacity:0.5');
 		linesSvg.append(newLine);
 		resolveLines(child);
 
@@ -105,26 +105,34 @@ function loadResource(path){
 }
 
 function markStar(element){
-	if(element.parentElement.parentElement.style["background-color"] == ""){
-		element.parentElement.parentElement.style["background-color"] = "yellow"
+	let root = element.parentElement.parentElement;
+
+	if(!root.classList.contains("root-active")){
 		element.firstElementChild.setAttribute("src", "src/images/star-active.png");
+		root.classList.add("root-active");
 	} else {
-		element.parentElement.parentElement.style["background-color"] = ""
 		element.firstElementChild.setAttribute("src", "src/images/star.png");
+		root.classList.remove("root-active");
 	}
 }
 
 function markStarFromPopUp(element){
 	const target = element.parentElement.parentElement.getAttribute("target-id");
+	let root = document.getElementById(target);
 
-	if(element.style["background-color"] == ""){
-		element.style["background-color"] = "yellow";
+	if(!root.classList.contains("root-active")){
+		element.classList.add("info-popup-star-button-active");
 		document.getElementById("info-popup-star-button-text").innerHTML = "Vymazať";
-		document.getElementById(target).lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
+		document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star-active.png");
+		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
+		root.classList.add("root-active");
+
 	} else {
-		element.style["background-color"] = "";
+		element.classList.remove("info-popup-star-button-active");
 		document.getElementById("info-popup-star-button-text").innerHTML = "Označiť";
-		document.getElementById(target).lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star.png");
+		document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star.png");
+		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star.png");
+		root.classList.remove("root-active");
 	}
 
 	document.getElementById(target).style["background-color"] = element.style["background-color"]
