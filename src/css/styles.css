@@ -80,7 +80,7 @@ body {
 
 .root-star:hover {
     transform:scale(1.2);
-    transform-duration:0.25s;
+    transition-duration:0.25s;
 }
 
 .root-info {
@@ -96,7 +96,7 @@ body {
 
 .root-info:hover {
     transform:scale(1.2);
-    transform-duration:0.25s;
+    transition-duration:0.25s;
 }
 
 .tree {
