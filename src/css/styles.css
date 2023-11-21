@@ -95,7 +95,7 @@ body {
 
 }
 
-.root-star:hover {
+.root-info:hover {
     transform:scale(1.2);
     transform-duration:0.25s;
 
