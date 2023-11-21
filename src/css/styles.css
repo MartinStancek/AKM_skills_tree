@@ -44,7 +44,7 @@ body {
     cursor: pointer;
 }
 
-.root:active {
+.root-active {
     backgroud:red;
 }
 
