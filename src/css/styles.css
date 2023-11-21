@@ -75,7 +75,8 @@ body {
     cursor: pointer;
     margin-left: 10px;
     border-radius: 20px;
-    background-color: unset;
+    background-color: unset;    
+    transition-duration:0.25s;
 }
 
 .root-star:hover {
@@ -90,7 +91,7 @@ body {
     border: 0;
     padding: 0;
     background-color: unset;
-
+    transition-duration:0.25s;
 }
 
 .root-info:hover {
