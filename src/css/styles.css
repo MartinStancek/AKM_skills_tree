@@ -28,6 +28,9 @@ body {
 .example {
 }
 
+.root-active {
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,246,146,1) 100%) !important;
+}
 
 .root {
     background: radial-gradient(circle, rgba(255,253,208,1) 0%, rgba(255,246,146,1) 100%);
