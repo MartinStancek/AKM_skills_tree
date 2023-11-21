@@ -3,9 +3,11 @@
 .info-popup {
   display: block; /*none*/
   background-color: white;
-  border: 6px solid black;
+  border: none;
+  border-radius: 20px;
   min-height: 600px; /* Need a specific value to work */
   cursor: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 /*  clear: both;*/
 
