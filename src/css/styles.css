@@ -63,7 +63,7 @@ body {
     height: 30px;
     text-align: left;
     width: 100%; 
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     z-index: 2;
 
 }
@@ -77,6 +77,7 @@ body {
     border-radius: 20px;
     background-color: unset;    
     transition-duration:0.25s;
+    height:30px;
 }
 
 .root-star:hover {
@@ -92,6 +93,7 @@ body {
     padding: 0;
     background-color: unset;
     transition-duration:0.25s;
+    height:40px;
 }
 
 .root-info:hover {
