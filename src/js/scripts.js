@@ -106,6 +106,7 @@ function loadResource(path){
 
 function markStar(element){
 	let root = element.parentElement.parentElement;
+	popEfect(root);
 
 	if(!root.classList.contains("root-active")){
 		element.firstElementChild.setAttribute("src", "src/images/star-active.png");
@@ -119,6 +120,8 @@ function markStar(element){
 function markStarFromPopUp(element){
 	const target = element.parentElement.parentElement.getAttribute("target-id");
 	let root = document.getElementById(target);
+	popEfect(root);
+	popEfect(element);
 
 	if(!root.classList.contains("root-active")){
 		element.classList.add("info-popup-star-button-active");
@@ -136,7 +139,14 @@ function markStarFromPopUp(element){
 	}
 
 	document.getElementById(target).style["background-color"] = element.style["background-color"]
+}
 
-
+function popEfect(element){
+	let delay = "150"
+	element.style.transform = "scale(1.2)"
+  	element.style.transition = delay+"ms"
+  	setTimeout(() => {
+	  element.style.transform = "scale(1)"
+	}, delay);
 }
 

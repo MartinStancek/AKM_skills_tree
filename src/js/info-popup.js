@@ -29,7 +29,18 @@ function openInfoPopup(element) {
   let description = (targetNode.description ? targetNode.description : "").split("\n").map(e=>`<div class="info-popup-popis-div">${e}</div>`).join('');
   document.getElementById("info-popup-name").innerHTML = targetNode.name;
   document.getElementById("info-popup-popis").innerHTML = description;
+  
 
+  document.getElementById("popup-link-youtube").style.display = (targetNode.links && targetNode.links.youtube) ? "inline-block" : "none";
+  document.getElementById("popup-link-podcast").style.display = (targetNode.links && targetNode.links.podcast) ? "inline-block" : "none";
+  document.getElementById("popup-link-study").style.display = (targetNode.links && targetNode.links.doi) ? "inline-block" : "none";
+  document.getElementById("popup-link-book").style.display = (targetNode.links && targetNode.links.book) ? "inline-block" : "none";
+
+  document.getElementById("popup-link-youtube").setAttribute("href", targetNode.links && targetNode.links.youtube);
+  document.getElementById("popup-link-podcast").setAttribute("href", targetNode.links && targetNode.links.podcast);
+  document.getElementById("popup-link-study").setAttribute("href", targetNode.links && targetNode.links.doi);
+  document.getElementById("popup-link-book").setAttribute("href", targetNode.links && targetNode.links.book);
+  
 }
 
 function closeInfoPopup(event) {
