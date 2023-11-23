@@ -40,10 +40,6 @@ body {
 .example {
 }
 
-.root-active {
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,246,146,1) 100%) !important;
-}
-
 .root {
     background: radial-gradient(circle, rgba(255,253,208,1) 0%, rgba(255,246,146,1) 100%);
     position: relative;
@@ -59,8 +55,9 @@ body {
     cursor: pointer;
 }
 
-.root:active {
-    backgroud:red;
+.root-active {
+    background: #DAA520;
+background: radial-gradient(circle, rgba(218,165,32,1) 100%, rgba(218,165,32,1) 100%);*/
 }
 
 .root-name {
