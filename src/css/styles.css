@@ -1,9 +1,17 @@
-@font-face {  
-    src: url(src/fonts/Quicksand-VariableFont_wght.ttf) format("truetype");
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../fonts/Quicksand.eot);
+  src: url(../fonts/Quicksand.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/Quicksand.woff2) format('woff2'),
+       url(../fonts/Quicksand.woff) format('woff'),
+       url(../fonts/Quicksand.ttf) format('truetype'),
+       url(../fonts/Quicksand.svg#Quicksand) format('svg'),
+       url(../fonts/Quicksand.otf) format('otf');
 }
 
+
 body {
-    font-family: Quicksand Fallback, sans-serif;
+    font-family: Quicksand;
     background: rgb(130,130,130);
 /*    background: radial-gradient(circle, rgba(130,130,130,1) 0%, rgba(69,68,55,1) 100%);*/
     animation: color 9s infinite radial;
@@ -59,10 +67,10 @@ body {
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: Quicksand;
     font-size: 14px;
     font-style: normal;
     font-weight: bold;
+    font-family: Quicksand;
 }
 
 .root-icons {

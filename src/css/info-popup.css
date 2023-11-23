@@ -111,6 +111,10 @@
   text-align: left;
 
   width: 100%; 
-
 }
+
+.popup-link-panel {
+  float:left;
+}
+
 
