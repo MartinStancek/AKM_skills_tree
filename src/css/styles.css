@@ -157,5 +157,6 @@ background: radial-gradient(circle, rgba(218,165,32,1) 100%, rgba(218,165,32,1) 
     font-family:arial;
     padding:10px;
     cursor: grab;
+    margin-top: 100px;
 }
 

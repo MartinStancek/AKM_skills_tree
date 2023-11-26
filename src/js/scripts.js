@@ -142,8 +142,8 @@ function markStarFromPopUp(element){
 }
 
 function popEfect(element){
-	let delay = "150"
-	element.style.transform = "scale(1.2)"
+	let delay = "130"
+	element.style.transform = "scale(1.1)"
   	element.style.transition = delay+"ms"
   	setTimeout(() => {
 	  element.style.transform = "scale(1)"
