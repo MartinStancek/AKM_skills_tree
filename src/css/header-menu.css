@@ -96,13 +96,13 @@
 	background-color: lightgreen;
 	border: 0;
 	display: flex;
-	font-family:'Quicksand';	
+	font-weight: 700;
+	font-family:'Quicksand';
+	color: white;	
 }
 
 #header-menu-summary-button-text {
 	margin: auto;
-	weight: 700;
-	color: white;
 }
 
 #header-menu-summary-button-number {
@@ -112,9 +112,8 @@
 	width: 30px;
 	border-radius: 10px;
 	background-color: #F6C02D;
-	weight: 700;
-	color:white;
 }
+
 #header-menu-summary-button-number-text {
 	margin-top: 8px;
 	margin-bottom: 8px;
