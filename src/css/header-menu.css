@@ -102,7 +102,9 @@
 #header-menu-summary-button-text {
 	margin: auto;
 	weight: 700;
+	color: white;
 }
+
 #header-menu-summary-button-number {
 	margin: auto;
 	margin-left: 10px;
@@ -111,7 +113,7 @@
 	border-radius: 10px;
 	background-color: #F6C02D;
 	weight: 700;
-	
+	color:white;
 }
 #header-menu-summary-button-number-text {
 	margin-top: 8px;
