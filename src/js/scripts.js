@@ -150,3 +150,24 @@ function popEfect(element){
 	}, delay);
 }
 
+
+function adjustSize(event){
+	elemt1.remove()
+	if(window.innerWidth < finalWidth) {
+		bottomMenu.appendChild(elemt1);
+	} else {
+		headerMenu.insertBefore(elemt1, headerMenu.childNodes[2]);
+	}
+}
+
+const headerMenu = document.getElementById("header-menu");
+const bottomMenu = document.getElementById("bottom-menu");
+const elemt1 = document.getElementById("header-menu-summary");
+const elemt2 = document.getElementById("header-menu-settings");
+const elemt3 = document.getElementById("header-menu-logo");
+const style1 = window.getComputedStyle(elemt1)["min-width"].replace(/px/, ""); 
+const style2 = window.getComputedStyle(elemt2)["min-width"].replace(/px/, ""); 
+const style3 = window.getComputedStyle(elemt3)["min-width"].replace(/px/, ""); 
+const finalWidth = (parseInt(style1)+parseInt(style2)+parseInt(style3)+150);
+addEventListener("resize", adjustSize);
+adjustSize();
