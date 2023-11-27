@@ -24,6 +24,7 @@
 
 #header-menu-summary {
 /*	border: 1px solid black;*/
+	border-radius:20px;
 	width: 34%;
 	height: 80px;
 	padding-top: 10px;
@@ -32,9 +33,7 @@
 #header-menu-summary-inner {
 	height: 100%;
 	background-color: white;
-  	border-radius: 40px;
   	display: flex;
-
 }
 
 #header-menu-summary-header {
