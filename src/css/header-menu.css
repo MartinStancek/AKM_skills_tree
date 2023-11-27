@@ -105,6 +105,8 @@
 
 #header-menu-summary-button-text {
 	margin: auto;
+	font-size: 14px;
+	text-transform: uppercase;
 }
 
 #header-menu-summary-button-number {
