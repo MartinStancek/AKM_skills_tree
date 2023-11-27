@@ -162,8 +162,12 @@ function adjustSize(event){
 	elemt1.remove()
 	if(window.innerWidth < finalWidth) {
 		bottomMenu.appendChild(elemt1);
+		let scale = window.innerWidth / parseInt(style1) /1.2;
+		elemt1.style.scale = scale > 1 ? 1 : scale;
 	} else {
 		headerMenu.insertBefore(elemt1, headerMenu.childNodes[2]);
+		elemt1.style.scale = "";
+
 	}
 }
 
