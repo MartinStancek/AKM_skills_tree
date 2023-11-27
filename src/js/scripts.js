@@ -25,7 +25,7 @@ function resolveLines(tree){
 		newLine.setAttribute('y1',from.bottom+window.pageYOffset);
 		newLine.setAttribute('x2',(to.right+window.pageXOffset+to.left+window.pageXOffset)/2);
 		newLine.setAttribute('y2',to.top+window.pageYOffset);
-		newLine.setAttribute('style', 'fill:red;stroke:black;stroke-width:5;opacity:0.5');
+		newLine.setAttribute('style', 'fill:black;stroke:black;stroke-width:2;opacity:1');
 		linesSvg.append(newLine);
 		resolveLines(child);
 
