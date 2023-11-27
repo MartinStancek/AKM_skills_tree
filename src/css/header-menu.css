@@ -98,7 +98,8 @@
 	display: flex;
 	font-weight: 700;
 	font-family:'Quicksand';
-	color: white;	
+	color: black;
+	padding: 0 20px;
 }
 
 #header-menu-summary-button-text {
