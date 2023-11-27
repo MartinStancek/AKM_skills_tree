@@ -101,11 +101,12 @@
 	font-family:'Quicksand';
 	color: white;
 	padding: 0 20px;
+	transform-duration:0.5s;
 }
 
 #header-menu-summary-button:hover {
 	transform:scale(1.1);
-	animation-duration:0.5s;
+	transform-duration:0.5s;
 }
 
 
