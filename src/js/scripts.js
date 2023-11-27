@@ -104,6 +104,11 @@ function loadResource(path){
 	return request.responseText;
 }
 
+function recalculateStars(){
+	let count = document.getElementsByClassName("root-active").length;
+	document.getElementById("header-menu-summary-button-number-text").innerHTML = count;
+}
+
 function markStar(element){
 	let root = element.parentElement.parentElement;
 	popEfect(root);
@@ -115,6 +120,7 @@ function markStar(element){
 		element.firstElementChild.setAttribute("src", "src/images/star.png");
 		root.classList.remove("root-active");
 	}
+	recalculateStars();
 }
 
 function markStarFromPopUp(element){
@@ -139,6 +145,7 @@ function markStarFromPopUp(element){
 	}
 
 	document.getElementById(target).style["background-color"] = element.style["background-color"]
+	recalculateStars();
 }
 
 function popEfect(element){
