@@ -29,10 +29,11 @@
 	height: 80px;
 	padding-top: 10px;
   	padding-bottom: 10px;
+	background-color: white;
+	box-shadow: 0 0 20px #ffdd99;
 }
 #header-menu-summary-inner {
 	height: 100%;
-	background-color: white;
   	display: flex;
 }
 
@@ -94,6 +95,8 @@
 	background-color: lightgreen;
 	border: 0;
 	display: flex;
+	font-family:'Quicksand';	
+	weight: bold;
 }
 
 #header-menu-summary-button-text {
