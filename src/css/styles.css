@@ -56,8 +56,8 @@ body {
 }
 
 .root-active {
-    background: #31979D;
-background: radial-gradient(circle, rgba(218,165,32,1) 100%, rgba(218,165,32,1) 100%);*/
+    background: #F6C02D;
+/*    background: radial-gradient(circle, rgba(218,165,32,1) 100%, rgba(218,165,32,1) 100%);*/
 }
 
 .root-name {
