@@ -68,6 +68,7 @@
 
 #info-popup-star-button {
   border: 3px solid black;
+  border-radius:20px;
   background-color: unset;
   padding: 0;
   width: 50%;
@@ -86,8 +87,6 @@
   display: inline-block;
   padding-top: 15px;
   padding-right: 30px;
-  float: right;
-
 }
 
 #popup-bottom-panel {
