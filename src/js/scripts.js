@@ -104,6 +104,11 @@ function loadResource(path){
 	return request.responseText;
 }
 
+function recalculateStars(){
+	let count = document.getElementsByClassName("root-active").length;
+	document.getElementById("header-menu-summary-button-number-text").innerHTML = count;
+}
+
 function markStar(element){
 	let root = element.parentElement.parentElement;
 	popEfect(root);
@@ -115,6 +120,7 @@ function markStar(element){
 		element.firstElementChild.setAttribute("src", "src/images/star.png");
 		root.classList.remove("root-active");
 	}
+	recalculateStars();
 }
 
 function markStarFromPopUp(element){
@@ -139,6 +145,7 @@ function markStarFromPopUp(element){
 	}
 
 	document.getElementById(target).style["background-color"] = element.style["background-color"]
+	recalculateStars();
 }
 
 function popEfect(element){
@@ -150,3 +157,28 @@ function popEfect(element){
 	}, delay);
 }
 
+
+function adjustSize(event){
+	elemt1.remove()
+	if(window.innerWidth < finalWidth) {
+		bottomMenu.appendChild(elemt1);
+		let scale = window.innerWidth / parseInt(style1) /1.2;
+		elemt1.style.scale = scale > 1 ? 1 : scale;
+	} else {
+		headerMenu.insertBefore(elemt1, headerMenu.childNodes[2]);
+		elemt1.style.scale = "";
+
+	}
+}
+
+const headerMenu = document.getElementById("header-menu");
+const bottomMenu = document.getElementById("bottom-menu");
+const elemt1 = document.getElementById("header-menu-summary");
+const elemt2 = document.getElementById("header-menu-settings");
+const elemt3 = document.getElementById("header-menu-logo");
+const style1 = window.getComputedStyle(elemt1)["min-width"].replace(/px/, ""); 
+const style2 = window.getComputedStyle(elemt2)["min-width"].replace(/px/, ""); 
+const style3 = window.getComputedStyle(elemt3)["min-width"].replace(/px/, ""); 
+const finalWidth = (parseInt(style1)+parseInt(style2)+parseInt(style3)+150);
+addEventListener("resize", adjustSize);
+adjustSize();
