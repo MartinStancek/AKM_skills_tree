@@ -97,14 +97,12 @@
 }
 
 .popup-close {
-  float: right;
   border: 0;
   padding: 0;
   cursor: pointer;
   padding-top: 20px;
   padding-right: 20px;
   background-color: unset;
-  float: right;
 }
 
 .popup-top-panel {
