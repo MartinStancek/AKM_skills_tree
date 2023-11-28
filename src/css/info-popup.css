@@ -76,7 +76,7 @@
   cursor: pointer;
   margin-left: 3px;
   min-width: 180px;
-  box-shadow: 0 0 20px gray;
+  background: rgb(255,254,217);
 
 #info-popup-star-button-text {
 /*  border: 3px solid black;*/
