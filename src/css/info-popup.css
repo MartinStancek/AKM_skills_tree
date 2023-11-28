@@ -42,7 +42,8 @@
   padding-left: 10%;
   padding-right: 10%;
   font-size: 200%;
-  text-align: center;
+  text-align: center;  
+  font-family: 'Quicksand';
 }
 
 #info-popup-popis {
@@ -51,8 +52,8 @@
   text-align: left;
   font-family: 'Quicksand';
   line-height: 1.5;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 14px;
 
 }
 .info-popup-popis-div {
@@ -99,8 +100,8 @@
   border: 0;
   padding: 0;
   cursor: pointer;
-  padding-top: 1%;
-  padding-right: 1%;
+  padding-top: 20px;
+  padding-right: 20px;
   background-color: unset;
 
 }
@@ -109,7 +110,6 @@
 /*    border: 1px solid black;*/
   height: 30px;
   text-align: left;
-
   width: 100%; 
 }
 
