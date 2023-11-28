@@ -70,7 +70,7 @@
   border: none;
   border-radius:15px;
   background-color: unset;
-  padding: 0;
+  padding: 20px;
   width: 50%;
   height: 100%;
   cursor: pointer;
@@ -80,7 +80,7 @@
 
 #info-popup-star-button-text {
 /*  border: 3px solid black;*/
-  font-weight: bold;
+  font-weight: 700;
   height: 100%;
   text-align: center;
   display: inline-block;
