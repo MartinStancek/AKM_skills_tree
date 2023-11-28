@@ -9,7 +9,6 @@
   cursor: auto;
   box-shadow: 0 0 20px #ffdd99;
   padding-bottom: 5%;
-  z-index: 20;
 
 /*  clear: both;*/
 
@@ -36,7 +35,8 @@
   overflow-y:scroll;
   z-index: 10;
   display: none; /*none*/
-  cursor: pointer;
+  cursor: pointer;  
+  z-index: 20;
 }
 
 #info-popup-name {
