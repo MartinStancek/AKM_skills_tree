@@ -30,18 +30,17 @@ function openInfoPopup(element) {
   document.getElementById("info-popup-name").innerHTML = targetNode.name;
   document.getElementById("info-popup-popis").innerHTML = description;
   
+  let links = targetNode.links && targetNode.links || {};
+  let keys = Object.keys(links);
+  console.log(keys)
+  let linkHtml = ""
+  for(let key of keys){
 
-  document.getElementById("popup-link-youtube").style.display = (targetNode.links && targetNode.links.youtube) ? "inline-block" : "none";
-  document.getElementById("popup-link-podcast").style.display = (targetNode.links && targetNode.links.podcast) ? "inline-block" : "none";
-  document.getElementById("popup-link-study").style.display = (targetNode.links && targetNode.links.doi) ? "inline-block" : "none";
-  document.getElementById("popup-link-book").style.display = (targetNode.links && targetNode.links.book) ? "inline-block" : "none";
-
-  document.getElementById("popup-link-youtube").setAttribute("href", targetNode.links && targetNode.links.youtube);
-  document.getElementById("popup-link-podcast").setAttribute("href", targetNode.links && targetNode.links.podcast);
-  document.getElementById("popup-link-study").setAttribute("href", targetNode.links && targetNode.links.doi);
-  document.getElementById("popup-link-book").setAttribute("href", targetNode.links && targetNode.links.book);
-  
+    linkHtml += `<button id=popup-link-${key} class="popup-link-button" href=${links[key]}><div class="popup-link-button-text">${key}</div></button>`
+  }
+  document.getElementById("popup-link-panel").innerHTML = linkHtml;
 }
+
 
 function closeInfoPopup(event) {
   if(event && (event.srcElement.id != 'close-popup-area' && event.srcElement.id != 'info-popup-padding')) {
