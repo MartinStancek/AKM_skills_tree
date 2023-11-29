@@ -121,8 +121,19 @@
 .popup-link-button {
   padding: 10px 20px;
   background-color: red;
+  font-size:20px;
 }
 
 .popup-link-button-text {
+  
+}
 
+#popup-link-book {
+  color:red;  
+  font-size:16px;
+}
+
+.popup-link-youtube {
+  color:red;
+  font-size:16px;
 }
