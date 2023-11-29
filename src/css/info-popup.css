@@ -124,11 +124,12 @@
 
 
 #popup-link-book {
-  color:red;
+  color:red;  
+  font-size:16px;
 }
 
 
-#popup-link-youtube {
+.popup-link-youtube {
   color:red;
   font-size:16px;
 }
