@@ -26,6 +26,15 @@ function openInfoPopup(element) {
 
 
   targetNode = reakcia.filter(function(e){return e.name === element.id.replace(/-/g, " ")})[0];
+
+  if(targetNode["embeded-youtube"]){
+    document.getElementById("info-popup-embeded-youtube").firstElementChild.setAttribute("src", targetNode["embeded-youtube"]);
+    document.getElementById("info-popup-embeded-youtube").style.display = "block"
+
+  } else {
+    document.getElementById("info-popup-embeded-youtube").style.display = "none"
+  }
+
   let description = (targetNode.description ? targetNode.description : "").split("\n").map(e=>`<div class="info-popup-popis-div">${e}</div>`).join('');
   document.getElementById("info-popup-name").innerHTML = targetNode.name;
   document.getElementById("info-popup-popis").innerHTML = description;
