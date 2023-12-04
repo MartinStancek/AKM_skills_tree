@@ -124,6 +124,8 @@
   padding: 10px 20px;
   background-color: white;
   font-size:14px;
+  weight:bold;
+  text-transform:uppercase;
 }
 
 .popup-link-button-text {
