@@ -88,8 +88,7 @@
   height: 100%;
   text-align: center;
   display: inline-block;
-  padding-top: 5px;
-  padding-right: 30px;  
+  padding-top: 5px; 
   text-transform: uppercase;
   font-family: 'Quicksand';
   font-size:16px;
@@ -123,7 +122,7 @@
 }
 
 #popup-link-panel {
-  padding-top:25px;
+  padding-top:15px;
 }
 
 
@@ -136,7 +135,7 @@
   text-transform:uppercase;
   border-radius: 50px;
   border:none;
-  margin:0 10px;
+  margin:10px;
   box-shadow: 0 0 20px #d3d3d3;
 }
 
