@@ -120,9 +120,10 @@
 
 
 .popup-link-button {
+  font-family:'Quicksand';
   padding: 10px 20px;
-  background-color: red;
-  font-size:20px;
+  background-color: white;
+  font-size:14px;
 }
 
 .popup-link-button-text {
