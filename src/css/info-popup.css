@@ -129,6 +129,7 @@
   font-weight:700;
   text-transform:uppercase;
   border-radius: 50px;
+  border:none;
   margin:0 15px;
   box-shadow: 0 0 20px #dbdbdb;
 }
