@@ -115,9 +115,8 @@
   width: 100%; 
 }
 
-#popup-link-panel {
+.popup-link-panel {
   float:left;
-  margin-top: 25px;
 }
 
 
