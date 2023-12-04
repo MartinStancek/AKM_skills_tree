@@ -19,7 +19,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 100px;
   max-width: 600px; /* Need a specific value to work */
   padding-left: 10%;
   padding-right: 10%;
