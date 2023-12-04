@@ -81,6 +81,11 @@
   min-width: 180px;
 }
 
+#info-popup-star-button:hover {
+  transform:scale(1.1);
+  transition-duration: 0.25s;
+}
+
 #info-popup-star-button-text {
 /*  border: 3px solid black;*/
   font-weight: 700;
