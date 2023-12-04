@@ -118,8 +118,11 @@
 }
 
 .popup-link-panel {
-  padding-top:25px;
   float:left;
+}
+
+#popup-link-panel {
+  padding-top:25px;
 }
 
 
