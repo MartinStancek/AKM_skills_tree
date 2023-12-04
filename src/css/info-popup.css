@@ -78,7 +78,9 @@
   height: 100%;
   cursor: pointer;
   margin-top: 25px;
-  min-width: 180px;
+  min-width: 180px;  
+  transition-duration: 0.25s;
+  transform: scale(1.1);
 }
 
 #info-popup-star-button:hover {
