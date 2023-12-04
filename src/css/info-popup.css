@@ -135,6 +135,11 @@
   box-shadow: 0 0 20px #d3d3d3;
 }
 
+.popup-link-button:hover {
+  transform:scale(1.1);
+  transition-duration: 0.25s;
+}
+
 .popup-link-button-text {
   
 }
