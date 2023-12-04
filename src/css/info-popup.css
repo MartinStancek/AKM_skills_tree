@@ -65,11 +65,11 @@
 }
 
 #info-popup-star-button-active {
-  background: rgb(246,192,45);
+  background-color: rgb(246,192,45);
 }
 
 #info-popup-star-button {
-  border: none;
+  border: 2px solid rgb(246,192,45);
   border-radius:15px;
   background-color: unset;
   padding: 10px;
