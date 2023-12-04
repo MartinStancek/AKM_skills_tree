@@ -66,7 +66,7 @@
 
 .info-popup-star-button-active {  
   border: 2px solid rgb(246,192,45);
-  background-color: rgb(246,192,45);
+  background-color: rgb(246,192,45) !important;
 }
 
 #info-popup-star-button {
