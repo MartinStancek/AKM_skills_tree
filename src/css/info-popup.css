@@ -133,12 +133,19 @@
   
 }
 
-#popup-link-book {
-  color:red;  
-  font-size:16px;
+#popup-link-youtube {
+  color:#FF0000;
 }
 
-#popup-link-youtube {
-  color:red;
-  font-size:16px;
+#popup-link-podcast {
+  color:#1DB954;
 }
+
+#popup-link-doi {
+  color:dodgerblue;
+}
+
+#popup-link-book {
+  color:dodgerblue;
+}
+
