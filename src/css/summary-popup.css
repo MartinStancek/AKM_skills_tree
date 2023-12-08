@@ -1,0 +1,135 @@
+
+/* The popup form - hidden by default */
+.summary-popup {
+  display: block; /*none*/
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  min-height: 600px; /* Need a specific value to work */
+  cursor: auto;
+  box-shadow: 0 0 50px #ffdd99;
+  padding-bottom: 5%;
+
+/*  clear: both;*/
+
+
+}
+#summary-popup-padding{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  max-width: 600px; /* Need a specific value to work */
+  padding-left: 10%;
+  padding-right: 10%;
+  z-index: 20;
+}
+
+#close-popup-area-summary {
+  top: 0;
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  position: fixed;
+  overflow-y:scroll;
+  z-index: 10;
+  display: none; /*none*/
+  cursor: pointer;  
+  z-index: 25;
+}
+
+#summary-popup-name {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 200%;
+  text-align: center;  
+  font-family: 'Quicksand';
+  font-weight: 700;
+}
+
+#summary-popup-skills-text {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 50px;
+  font-size: 150%;
+  text-align: center;  
+  font-family: 'Quicksand';
+  font-weight: 700;
+}
+
+#summary-popup-mail-box {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 40px;
+
+}
+
+
+.summary-popup-skills-tree-header {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.summary-popup-skills-tree-header-add-skills {
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  background-color: unset;
+  border: 0;
+  height: 100%;
+  border-radius: 15px;
+  transition-duration: 0.5s;
+}
+.summary-popup-skills-tree-header-add-skills:hover {
+  transform:scale(0.9);
+  transition-duration:0.5s;
+}
+
+.summary-popup-skills-tree-header-add-skills-img {
+
+}
+
+.summary-popup-skills-tree-header-add-skills-text {
+  font-size: 200%;
+  color: green;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: 'Quicksand';
+
+}
+
+.summary-popup-skills-tree-content-line {
+  background-color: yellow;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.summary-popup-skills-tree-content-line-delete {
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2%;
+
+
+}
+.summary-popup-skills-tree-content-line-text {
+  margin: auto;
+  font-family: 'Quicksand';
+  font-size: 100%;
+
+
+}
+.summary-popup-skills-tree-content-line-inspect {
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 2%;
+
+
+}
