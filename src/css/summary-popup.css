@@ -54,16 +54,20 @@
   font-size: 150%;
   text-align: center;  
   font-family: 'Quicksand';
-  font-weight: 700;
 }
 
 #summary-popup-mail-box {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 30px;
-  height: 200px;
+/*  height: 200px;*/
   border: 1px solid black;
   border-radius: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Quicksand';
+  font-weight: 700;
 
 }
 
@@ -132,4 +136,67 @@
   margin-right: 2%;
 
 
+}
+
+
+#summary-popup-mail-box-header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#summary-popup-mail-box-contact-back {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#summary-popup-mail-box-name-email {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#summary-popup-mail-box-name {
+  width: 45%;
+  height: 30px;
+  margin-right: auto;
+  border-radius: 8px;
+
+}
+
+#summary-popup-mail-box-email {
+  width: 45%;
+  margin-left: auto;
+  height: 30px;
+  border-radius: 8px;
+
+
+}
+
+
+#summary-popup-mail-box-submit {
+  font-family: 'Quicksand';
+  height: 50px;
+  border-radius: 13px;
+  border: 0;
+  background-color: lightgreen;
+  transition-duration:0.5s;
+
+}
+#summary-popup-mail-box-submit:hover {
+  transform:scale(1.05);
+  transition-duration:0.5s;
+}
+
+#summary-popup-mail-box-contact-back-checkbox {
+  width: 30px;
+  height: 30px;
+
+}
+
+
+#summary-popup-mail-box-checbox-text {
+    text-align: left;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
