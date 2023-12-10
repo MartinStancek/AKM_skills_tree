@@ -51,9 +51,11 @@
   padding-left: 10%;
   padding-right: 10%;
   margin-top: 50px;
+  margin-bottom: 25px;
   font-size: 150%;
   text-align: center;  
   font-family: 'Quicksand';
+  font-weight: 700;
 }
 
 #summary-popup-mail-box {
