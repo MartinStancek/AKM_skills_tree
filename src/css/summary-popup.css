@@ -62,12 +62,14 @@
   margin-top: 30px;
 /*  height: 200px;*/
   border: 1px solid black;
-  border-radius: 40px;
+  border-radius: 25px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   font-family: 'Quicksand';
   font-weight: 700;
+  box-shadow: 0 0 20px #ffdd99;
+  border: 2px solid rgb(246,192,45);
 
 }
 
