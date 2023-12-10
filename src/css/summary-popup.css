@@ -85,6 +85,7 @@
   display: flex;
   margin-left: auto;
   margin-top: auto;
+  margin-bottom: 10px;
   background-color: unset;
   border: 0;
   height: 100%;
