@@ -95,7 +95,7 @@
 }
 
 .summary-popup-skills-tree-header-add-skills-img {
-
+  height:30px;
 }
 
 .summary-popup-skills-tree-header-add-skills-text {
@@ -223,7 +223,7 @@
   margin-left: auto;
   height: 30px;
   border-radius: 8px;
-  background: rgb(255,254,217);
+  background: white;
 }
 
 
