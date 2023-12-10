@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div include-html="src/html/content"></div>
+    <div include-html="src/html/content.html"></div>
     <script type="text/javascript" src="src/js/scripts.js"></script>
     <script type="text/javascript" src="src/js/info-popup.js"></script>
     <script type="text/javascript" src="src/js/summary-popup.js"></script>

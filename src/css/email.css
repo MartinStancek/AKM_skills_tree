@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../fonts/Quicksand.eot);
+  src: url(../fonts/Quicksand.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/Quicksand.woff2) format('woff2'),
+       url(../fonts/Quicksand.woff) format('woff'),
+       url(../fonts/Quicksand.ttf) format('truetype'),
+       url(../fonts/Quicksand.svg#Quicksand) format('svg'),
+       url(../fonts/Quicksand.otf) format('otf');
+}
+
+
+body {
+    font-family: Quicksand;
+    background: rgb(255,254,217);
+/*    background: radial-gradient(circle, rgba(130,130,130,1) 0%, rgba(69,68,55,1) 100%);*/
+    animation: color 9s infinite radial;
+}
+
+#send-email-content {
+  display: flex; /*none*/
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  min-height: 600px; /* Need a specific value to work */
+  max-width: 600px;
+  cursor: auto;
+  box-shadow: 0 0 50px #ffdd99;
+  padding-bottom: 2%;
+  margin: auto;
+  flex-direction: column;
+/*  clear: both;*/
+  padding-left: 60px;
+  padding-right: 60px;
+
+}
+
+#send-email-header {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 200%;
+}
+
+#send-email-name {
+  margin-top: 10px;
+}
+
+#send-email-message {
+  margin-top: 10px;
+}
+
+#send-email-contact {
+  margin-top: 10px;
+}
+
+#send-email-error {
+  font-family: consolas;
+  margin-top: 50px;
+}
+
+#send-email-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+a {
+  color: white;
+  background-color: #0dbf5c;
+  color: white !important;
+  text-align: center;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: unset;
+}
