@@ -18,3 +18,8 @@ function closeSummaryPopup(event) {
   document.getElementById("connector-lines").style.filter = "none";
 
 }
+
+function inspectSkill(element){
+    element.parentElement.parentElement.lastElementChild.lastElementChild.classList.toggle("summary-popup-skills-tree-content-detail-expanded")
+
+}

@@ -105,13 +105,46 @@
 
 }
 
-.summary-popup-skills-tree-content-line {
-  background-color: yellow;
+.summary-popup-skills-tree-content {
+  overflow: hidden;
   display: flex;
   margin-left: 10%;
   margin-right: 10%;
-  height: 50px;
+}
+
+.summary-popup-skills-tree-content-detail-wrapper {
+  margin-top: 0;
+  overflow: hidden;
+}
+.summary-popup-skills-tree-content-detail {
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+  font-family: 'Quicksand';
+  text-align: left;
+  transition: all 0.5s;
+  margin-top: -50%;
+}
+.summary-popup-skills-tree-content-detail-expanded {
+  margin-top: 0;
+}
+
+.summary-popup-skills-tree-content-line {
+/*  margin-top: -10%;*/
   border-radius: 15px;
+  background-color: yellow;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+
+}
+
+.summary-popup-skills-tree-content-line-colapsed {
+  display: flex;
+
+  height: 50px;
 }
 
 .summary-popup-skills-tree-content-line-delete {
@@ -125,16 +158,28 @@
 .summary-popup-skills-tree-content-line-text {
   margin: auto;
   font-family: 'Quicksand';
-  font-size: 100%;
+  font-size: 130%;
 
 
 }
 .summary-popup-skills-tree-content-line-inspect {
-  height: 30px;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 2%;
+  margin-left: unset;
+  border: 0;
+  background-color: unset;
+  transition-duration:0.5s;
 
+}
+.summary-popup-skills-tree-content-line-inspect:hover {
+  transform:scale(0.9);
+  transition-duration:0.5s;
+}
+
+
+.summary-popup-skills-tree-content-line-inspect-image {
+  height: 30px;
 
 }
 
@@ -199,4 +244,15 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+}
+
+#expand-contract {
+  border-bottom: 1px solid red;
+  margin-top: -100%;
+  transition: all 1s;
+}
+
+#expand-contract.expanded {
+   background-color: green;
+   margin-top: 0;
 }
