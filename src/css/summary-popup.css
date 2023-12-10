@@ -138,6 +138,7 @@
   font-family: 'Quicksand';
   text-align: left;
   transition: all 0.5s;
+  font-weight: 500;
 }
 
 
@@ -174,7 +175,7 @@
 .summary-popup-skills-tree-content-line-text {
   margin: auto;
   font-family: 'Quicksand';
-  font-size: 130%;
+  font-size: 100%;
   font-weight: 700;
 
 
