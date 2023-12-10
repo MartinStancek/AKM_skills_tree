@@ -126,11 +126,8 @@
   font-family: 'Quicksand';
   text-align: left;
   transition: all 0.5s;
-  margin-top: -50%;
 }
-.summary-popup-skills-tree-content-detail-expanded {
-  margin-top: 0;
-}
+
 
 .summary-popup-skills-tree-content-line {
 /*  margin-top: -10%;*/
