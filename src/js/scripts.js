@@ -111,13 +111,17 @@ function recalculateStars(){
 
 function markStar(element){
 	let root = element.parentElement.parentElement;
+	markStarRootElem(root);
+}
+
+function markStarRootElem(root){
 	popEfect(root);
 
 	if(!root.classList.contains("root-active")){
-		element.firstElementChild.setAttribute("src", "src/images/star-active.png");
+		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
 		root.classList.add("root-active");
 	} else {
-		element.firstElementChild.setAttribute("src", "src/images/star.png");
+		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star.png");
 		root.classList.remove("root-active");
 	}
 	recalculateStars();
@@ -126,25 +130,21 @@ function markStar(element){
 function markStarFromPopUp(element){
 	const target = element.parentElement.parentElement.getAttribute("target-id");
 	let root = document.getElementById(target);
-	popEfect(root);
+	markStarRootElem(root);
 	popEfect(element);
 
 	if(!root.classList.contains("root-active")){
 		element.classList.add("info-popup-star-button-active");
 		document.getElementById("info-popup-star-button-text").innerHTML = "Vymazať";
 		document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star-active.png");
-		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
-		root.classList.add("root-active");
 
 	} else {
 		element.classList.remove("info-popup-star-button-active");
 		document.getElementById("info-popup-star-button-text").innerHTML = "Označiť";
 		document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star.png");
-		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star.png");
-		root.classList.remove("root-active");
 	}
 
-	document.getElementById(target).style["background-color"] = element.style["background-color"]
+	// document.getElementById(target).style["background-color"] = element.style["background-color"]
 	recalculateStars();
 }
 

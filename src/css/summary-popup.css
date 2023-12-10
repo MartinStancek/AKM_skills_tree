@@ -158,9 +158,14 @@
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 2%;
-
+  transition-duration:0.5s;
 
 }
+.summary-popup-skills-tree-content-line-delete:hover {
+  transform:scale(0.9);
+  transition-duration:0.5s;
+}
+
 .summary-popup-skills-tree-content-line-text {
   margin: auto;
   font-family: 'Quicksand';

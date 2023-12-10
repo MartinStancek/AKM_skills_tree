@@ -22,6 +22,7 @@ function openSummaryPopup() {
 
     linesHtml+=lineTemplate.replace("%NAME%", data.name)
                            .replace("%DESCRIPTION%", data.description)
+                           .replace("%DATA_NAME%", collection[i].id)
   }
 
   if(linesHtml == ""){
@@ -62,6 +63,13 @@ function inspectSkill(element){
     element.parentElement.parentElement.lastElementChild.lastElementChild.style["margin-top"]  = "0px"
   }
   // element.parentElement.parentElement.lastElementChild.lastElementChild.classList.toggle("summary-popup-skills-tree-content-detail-expanded")
+}
+
+function summaryRemoveStar(targetId, element){
+  element.parentElement.parentElement.remove()
+
+  markStarRootElem(document.getElementById(targetId));
+
 }
 
 
