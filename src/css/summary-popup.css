@@ -168,6 +168,7 @@
   margin-bottom: auto;
   margin-left: 2%;
   transition-duration:0.5s;
+  cursor:pointer;
 
 }
 .summary-popup-skills-tree-content-line-delete:hover {
@@ -201,6 +202,7 @@
 
 .summary-popup-skills-tree-content-line-inspect-image {
   height: 20px;
+  cursor:pointer;
 
 }
 
