@@ -130,7 +130,6 @@ function markStarRootElem(root){
 function markStarFromPopUp(element){
 	const target = element.parentElement.parentElement.getAttribute("target-id");
 	let root = document.getElementById(target);
-	markStarRootElem(root);
 	popEfect(element);
 
 	if(!root.classList.contains("root-active")){
@@ -143,6 +142,7 @@ function markStarFromPopUp(element){
 		document.getElementById("info-popup-star-button-text").innerHTML = "Označiť";
 		document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star.png");
 	}
+	markStarRootElem(root);
 
 	// document.getElementById(target).style["background-color"] = element.style["background-color"]
 	recalculateStars();
