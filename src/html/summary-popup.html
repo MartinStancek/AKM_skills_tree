@@ -11,8 +11,8 @@
                 <!-- <form action="#"> -->
                 <div id="summary-popup-mail-box-header">Odošlite si sumár označených skills na emailovú adresu</div>
                 <div id="summary-popup-mail-box-name-email">
-                    <input type="text" id="summary-popup-mail-box-name" name="name" placeholder="Vaše meno">
-                    <input type="text" id="summary-popup-mail-box-email" name="email" placeholder="Vaša emailová adresa">
+                    <input type="text" id="summary-popup-mail-box-name" name="name" placeholder="Vaše meno" autocomplete="name">
+                    <input type="text" id="summary-popup-mail-box-email" name="email" placeholder="Vaša emailová adresa" autocomplete="email">
                 </div>
                 <div id="summary-popup-mail-box-contact-back">
                     <input type="checkbox" id="summary-popup-mail-box-contact-back-checkbox" name="contact-back" >
@@ -24,27 +24,6 @@
             </div>
             <div id="summary-popup-skills-text">Označené skills</div>
             <div id="summary-popup-skills-tree-parent">
-                <div id="summary-popup-skills-tree-reakcia" class="summary-popup-skills-tree">
-                    <div class="summary-popup-skills-tree-header">
-                        <div include-html="src/html/logo.html"></div>
-                        <button class="summary-popup-skills-tree-header-add-skills">
-                            <img class="summary-popup-skills-tree-header-add-skills-img" src="src/images/add-skills.png" alt="logo" >
-                            <div class="summary-popup-skills-tree-header-add-skills-text">pridať skills</div>
-                        </button>
-                    </div>
-                    <div class="summary-popup-skills-tree-content">
-                        <div class="summary-popup-skills-tree-content-line">
-                            <div class="summary-popup-skills-tree-content-line-colapsed">
-                                <img class="summary-popup-skills-tree-content-line-delete" src="src/images/remove-skill.png" alt="delete" >
-                                <div class="summary-popup-skills-tree-content-line-text">Emócie a atmosféra diskusie</div>
-                                <div class="summary-popup-skills-tree-content-line-inspect" onclick="inspectSkill(this)"><img class="summary-popup-skills-tree-content-line-inspect-image" src="src/images/expand-skill.png" alt="open" ></div>
-                            </div>
-                            <div class="summary-popup-skills-tree-content-detail-wrapper">
-                                <div class="summary-popup-skills-tree-content-detail" >Kontrola nad vlastnými emóciami vytvára pozitívnu a konštruktívnu atmosféru. Emocionálna inteligencia a schopnosť porozumenia rôznym perspektívam podporujú otvorenú komunikáciu a chránia nás pred neproduktívnym konfliktom. Kombinácia týchto faktorov umožňuje vytvárať priestor pre konštruktívnu výmenu a rast v diskusii.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
    

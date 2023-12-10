@@ -1,14 +1,44 @@
 document.querySelector('#close-popup-area-summary').onclick = closeSummaryPopup;
 
+const lineTemplate = loadResource("src/html/summary-popup-skill-line.html");
+const parentTemplate = loadResource("src/html/summary-popup-skill-parent.html");
+
+
 function openSummaryPopup() {
   document.getElementById("close-popup-area-summary").style.display = "block";
   document.getElementById("tree-structrure-content").style.filter = "blur(6px)";
   document.getElementById("connector-lines").style.filter = "blur(6px)";
 
-  const collection = document.getElementsByClassName("summary-popup-skills-tree-content-detail");
+  let skillsTreeParent = document.getElementById("summary-popup-skills-tree-parent");
+  
+  // TODO: iterovat cez vsetky skillstree
+
+  let linesHtml = "";
+  
+  const collection = document.getElementsByClassName("root-active");
+
   for (let i = 0; i < collection.length; i++) {
-    let rect = collection[i].getBoundingClientRect();
-    collection[i].style["margin-top"] = "-"+(rect.height+20)+"px"
+    let data = reakcia.filter(e=>e.name == collection[i].id.replace(/-/g, " "))[0]
+
+    linesHtml+=lineTemplate.replace("%NAME%", data.name)
+                           .replace("%DESCRIPTION%", data.description)
+  }
+
+  if(linesHtml == ""){
+    linesHtml = '<div class="summary-popup-skills-tree-content-any">Žiadne vybraté skills</div>'
+  }
+
+  const parentHtmlTemplate = new DOMParser().parseFromString(parentTemplate.replace("%LINES%", linesHtml), "text/html");
+  skillsTreeParent.innerHTML = ""
+  skillsTreeParent.appendChild(parentHtmlTemplate.body.lastElementChild);
+
+
+  includeHTML();
+
+  const collection2 = document.getElementsByClassName("summary-popup-skills-tree-content-detail");
+  for (let i = 0; i < collection2.length; i++) {
+    let rect = collection2[i].getBoundingClientRect();
+    collection2[i].style["margin-top"] = "-"+(rect.height+20)+"px"
   }
 }
 
