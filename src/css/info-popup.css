@@ -72,7 +72,7 @@
 #info-popup-star-button {
   border: 2px solid rgb(246,192,45);
   border-radius:15px;
-  background-color: unset;
+  background-color: #ffdd99;
   padding: 10px;
   width: 50%;
   height: 100%;
