@@ -222,9 +222,12 @@
 #summary-popup-mail-box-submit {
   font-family: 'Quicksand';
   height: 50px;
-  border-radius: 13px;
+  border-radius: 15px;
+  background-color: #0dbf5c;
   border: 0;
-  background-color: lightgreen;
+  font-weight: 700;
+  color: white;
+  padding: 0 20px;
   transition-duration:0.5s;
 
 }
