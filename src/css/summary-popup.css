@@ -101,11 +101,12 @@
 }
 
 .summary-popup-skills-tree-header-add-skills-text {
-  font-size: 200%;
+  font-size: 130%;
   color: green;
   margin-top: auto;
   margin-bottom: auto;
   font-family: 'Quicksand';
+  font-weight: 700;
 
 }
 
