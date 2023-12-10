@@ -218,17 +218,19 @@
   margin-left: auto;
   height: 30px;
   border-radius: 8px;
-
-
+  background: rgb(255,254,217);
 }
 
 
 #summary-popup-mail-box-submit {
   font-family: 'Quicksand';
   height: 50px;
-  border-radius: 13px;
+  border-radius: 15px;
+  background-color: #0dbf5c;
   border: 0;
-  background-color: lightgreen;
+  font-weight: 700;
+  color: white;
+  padding: 0 20px;
   transition-duration:0.5s;
 
 }
