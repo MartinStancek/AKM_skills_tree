@@ -91,6 +91,7 @@
   height: 100%;
   border-radius: 15px;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 .summary-popup-skills-tree-header-add-skills:hover {
   transform:scale(0.9);
@@ -245,6 +246,7 @@
   color: white;
   padding: 0 20px;
   transition-duration:0.5s;
+  cursor: pointer;
 
 }
 #summary-popup-mail-box-submit:hover {
