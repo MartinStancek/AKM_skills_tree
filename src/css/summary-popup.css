@@ -50,6 +50,7 @@
 #summary-popup-skills-text {
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 10px;
   margin-top: 50px;
   font-size: 200%;
   text-align: center;  
@@ -84,7 +85,7 @@
   display: flex;
   margin-left: auto;
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   background-color: unset;
   border: 0;
   height: 100%;
