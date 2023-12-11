@@ -117,6 +117,7 @@
 	color: white;
 	padding: 0 20px;
 	transition-duration:0.5s;
+	cursor:pointer;
 }
 
 #header-menu-summary-button:hover {
