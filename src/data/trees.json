@@ -1,0 +1,14 @@
+[
+	{
+		"id": 1,
+		"displayName": "Reakcia",
+		"fileName": "reakcia.json",
+		"pathName": "reakcia"
+	},
+	{
+		"id": 2,
+		"displayName": "Kontrola reakcie",
+		"fileName": "kontrola-reakcie.json",
+		"pathName": "kontrola-reakcie"
+	}
+]

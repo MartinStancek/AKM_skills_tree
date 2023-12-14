@@ -1,4 +1,14 @@
-const reakcia = JSON.parse(loadResource("src/data/reakcia.json"))
+const treeMetadata = JSON.parse(loadResource('src/data/trees.json'))
+
+console.log(window.location.search)
+
+if(window.location.search == "") {
+	window.location.search = `?${treeMetadata.filter(e=>e.id = 1)[0].pathName}`;
+}
+
+const actualTreeMetadata = treeMetadata.filter(e=>e.pathName== window.location.search.replace(/\?/, ""))[0]
+
+const reakcia = JSON.parse(loadResource(`src/data/${actualTreeMetadata.fileName}`))
 
 
 includeHTML();
@@ -60,6 +70,8 @@ function includeAttribute(innerHtml){
 
 	switch(argName){
 	case "%GENERATE_TREE%": return generateTree();
+	case "%SKILL_TREE_NAME%": return actualTreeMetadata.displayName;
+	case "%SETTINGS_LINLS%": return generateTreeLinks();
 	default: throw new Error("Unknown argName:"+argName);
 	}
 
@@ -68,25 +80,26 @@ function includeAttribute(innerHtml){
 function generateTree(){
 	const plainTemplate = loadResource("src/html/node.html");
  	
-	return generateTreeRecursive(reakcia.filter(function(e){return e.root})[0].name, plainTemplate, reakcia).innerHTML;
+	return generateTreeRecursive(/*id=*/1, plainTemplate, reakcia).innerHTML;
 }
 
-function generateTreeRecursive(parentName, plainTemplate, data){
+function generateTreeRecursive(parentId, plainTemplate, data){
 	// console.log("Generating: "+parent.name)
-	let parent = data.filter(function(e){return e.name === parentName})[0];
+	let parent = data.filter(function(e){return e.id === parentId})[0];
 	if(!parent) {console.error("Unable to find parent with name "+parentName);}
 	const htmlTemplate = new DOMParser().parseFromString(plainTemplate, "text/html");
 	htmlTemplate.body.innerHTML = htmlTemplate.body.innerHTML
 			.replace("%NAME%", parent.name)
-			.replace("%NODE_ID%", parent.name.replace(/ /g, "-"));
+			.replace("%NODE_ID%", parent.name.replace(/ /g, "-"))
+			.replace("%DATA_ID%", parent.id);
 
 	if(!parent.childs){
 		return htmlTemplate.body;
 	}
 
 	let childs = htmlTemplate.body.getElementsByClassName("childs")[0];
-	for (var childName of parent.childs) {
-		childs.appendChild(generateTreeRecursive(childName, plainTemplate, data));
+	for (var childId of parent.childs) {
+		childs.appendChild(generateTreeRecursive(childId, plainTemplate, data));
 	}
 
 	return htmlTemplate.body;
@@ -182,3 +195,36 @@ const style3 = window.getComputedStyle(elemt3)["min-width"].replace(/px/, "");
 const finalWidth = (parseInt(style1)+parseInt(style2)+parseInt(style3)+150);
 addEventListener("resize", adjustSize);
 adjustSize();
+
+
+document.querySelector('#close-popup-area-settings').onclick = closeSettingsPopup;
+
+function openSettingsPopup() {
+  document.getElementById("close-popup-area-settings").style.display = "flex";
+  document.getElementById("tree-structrure-content").style.filter = "blur(6px)";
+  document.getElementById("connector-lines").style.filter = "blur(6px)";
+
+}
+function closeSettingsPopup(event) {
+  if(event && (event.srcElement.id != 'close-popup-area-settings' && event.srcElement.id != 'settings-popup-padding')) {
+    return;
+  }
+
+  document.getElementById("close-popup-area-settings").style.display = "none";
+  document.getElementById("tree-structrure-content").style.filter = "none";
+  document.getElementById("connector-lines").style.filter = "none";
+
+}
+
+
+function generateTreeLinks(){
+	let resHtml = ""
+	for (var i = 0; i < treeMetadata.length; i++) {
+		resHtml+=`<div class="settings-popup-link-subtree" onclick=redirectToTree("${treeMetadata[i].pathName}")>${treeMetadata[i].displayName}</div>`
+	}
+	return resHtml;
+}
+
+function redirectToTree(treePath) {
+	window.location.search = `?${treePath}`;
+}
