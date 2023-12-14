@@ -3,10 +3,28 @@ const treeMetadata = JSON.parse(loadResource('src/data/trees.json'))
 console.log(window.location.search)
 
 if(window.location.search == "") {
-	window.location.search = `?${treeMetadata.filter(e=>e.id = 1)[0].pathName}`;
+	// Get current URL parts
+	const path = window.location.pathname;
+	const params = new URLSearchParams(window.location.search);
+	const hash = window.location.hash;
+
+	// Update query string values
+	params.set('t', treeMetadata.filter(e=>e.id = 1)[0].pathName);
+
+	// Encode URL
+	// numerical=123&string=yummy&multiple=a%2Cb%2Cc&foreignChar=%C3%A9
+	// console.log(params.toString());
+
+	// Update URL
+	window.history.replaceState({}, '', `${path}?${params.toString()}${hash}`);
+
+	// window.location.search = `?${tre}`;
 }
 
-const actualTreeMetadata = treeMetadata.filter(e=>e.pathName== window.location.search.replace(/\?/, ""))[0]
+const params = new URLSearchParams(window.location.search);
+
+
+const actualTreeMetadata = treeMetadata.filter(e=>e.pathName== params.get("t"))[0]
 
 const reakcia = JSON.parse(loadResource(`src/data/${actualTreeMetadata.fileName}`))
 
@@ -226,5 +244,8 @@ function generateTreeLinks(){
 }
 
 function redirectToTree(treePath) {
-	window.location.search = `?${treePath}`;
+	const params = new URLSearchParams(window.location.search);
+	params.set('t', treePath);
+
+	window.location.search = params.toString();
 }
