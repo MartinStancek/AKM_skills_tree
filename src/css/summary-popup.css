@@ -7,8 +7,8 @@
   border-radius: 20px;
   min-height: 600px; /* Need a specific value to work */
   cursor: auto;
-  box-shadow: 0 0 50px #ffdd99;
-  padding-bottom: 2%;
+  box-shadow: 0 0 200px black;
+  padding-bottom: 10%;
 
 /*  clear: both;*/
 
@@ -21,7 +21,8 @@
   top: 10%;
   max-width: 600px; /* Need a specific value to work */
   padding-left: 10%;
-  padding-right: 10%;
+  padding-right: 10%;  
+  padding-bottom: 100px;
   z-index: 20;
 }
 
@@ -50,10 +51,12 @@
 #summary-popup-skills-text {
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 10px;
   margin-top: 50px;
   font-size: 150%;
   text-align: center;  
   font-family: 'Quicksand';
+  font-weight: 700;
 }
 
 #summary-popup-mail-box {
@@ -68,9 +71,9 @@
   flex-direction: column;
   font-family: 'Quicksand';
   font-weight: 700;
-  box-shadow: 0 0 20px #ffdd99;
+/*   box-shadow: 0 0 20px #ffdd99; */
   border: 2px solid rgb(246,192,45);
-
+  background: rgb(255,254,217);
 }
 
 
@@ -83,11 +86,13 @@
   display: flex;
   margin-left: auto;
   margin-top: auto;
+  margin-bottom: 15px;
   background-color: unset;
   border: 0;
   height: 100%;
   border-radius: 15px;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 .summary-popup-skills-tree-header-add-skills:hover {
   transform:scale(0.9);
@@ -95,15 +100,18 @@
 }
 
 .summary-popup-skills-tree-header-add-skills-img {
-
+  height:30px;
 }
 
 .summary-popup-skills-tree-header-add-skills-text {
-  font-size: 200%;
-  color: green;
+  font-size: 130%;
+  color: #0dbf5c;
   margin-top: auto;
   margin-bottom: auto;
   font-family: 'Quicksand';
+  font-weight: 700;
+  padding-left:10px;
+  padding-bottom:5px;
 
 }
 
@@ -133,13 +141,14 @@
   font-family: 'Quicksand';
   text-align: left;
   transition: all 0.5s;
+  font-weight: 500;
 }
 
 
 .summary-popup-skills-tree-content-line {
 /*  margin-top: -10%;*/
   border-radius: 15px;
-  background-color: yellow;
+  background-color: #F6C02D;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -154,11 +163,12 @@
 }
 
 .summary-popup-skills-tree-content-line-delete {
-  height: 30px;
+  height: 20px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 2%;
   transition-duration:0.5s;
+  cursor:pointer;
 
 }
 .summary-popup-skills-tree-content-line-delete:hover {
@@ -169,7 +179,8 @@
 .summary-popup-skills-tree-content-line-text {
   margin: auto;
   font-family: 'Quicksand';
-  font-size: 130%;
+  font-size: 100%;
+  font-weight: 700;
 
 
 }
@@ -190,7 +201,8 @@
 
 
 .summary-popup-skills-tree-content-line-inspect-image {
-  height: 30px;
+  height: 20px;
+  cursor:pointer;
 
 }
 
@@ -223,7 +235,7 @@
   margin-left: auto;
   height: 30px;
   border-radius: 8px;
-  background: rgb(255,254,217);
+  background: white;
 }
 
 
@@ -237,6 +249,7 @@
   color: white;
   padding: 0 20px;
   transition-duration:0.5s;
+  cursor: pointer;
 
 }
 #summary-popup-mail-box-submit:hover {
