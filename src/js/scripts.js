@@ -1,11 +1,12 @@
 const treeMetadata = JSON.parse(loadResource('src/data/trees.json'))
 
-console.log(window.location.search)
 
-if(window.location.search == "") {
+const params = new URLSearchParams(window.location.search);
+
+
+if(params.get('t') == null) {
 	// Get current URL parts
 	const path = window.location.pathname;
-	const params = new URLSearchParams(window.location.search);
 	const hash = window.location.hash;
 
 	// Update query string values
@@ -21,7 +22,6 @@ if(window.location.search == "") {
 	// window.location.search = `?${tre}`;
 }
 
-const params = new URLSearchParams(window.location.search);
 
 
 const actualTreeMetadata = treeMetadata.filter(e=>e.pathName== params.get("t"))[0]
@@ -244,7 +244,6 @@ function generateTreeLinks(){
 }
 
 function redirectToTree(treePath) {
-	const params = new URLSearchParams(window.location.search);
 	params.set('t', treePath);
 
 	window.location.search = params.toString();
