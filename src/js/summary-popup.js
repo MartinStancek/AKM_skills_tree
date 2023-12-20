@@ -28,7 +28,9 @@ function openSummaryPopup() {
 
       linesHtml+=lineTemplate.replace("%NAME%", data.name)
                              .replace("%DESCRIPTION%", data.description)
-                             .replace("%DATA_NAME%", cookieArr[i])
+                             .replace("%DATA_NAME%", data.name.replace(/ /g, "-"))
+                             .replace("%DATA_TREE_ID%", actualTreeMetadata.id)
+                             .replace("%TARGET_ELEM_ID%", data.id)
     }
 
     if(linesHtml == ""){
@@ -73,10 +75,22 @@ function inspectSkill(element){
   // element.parentElement.parentElement.lastElementChild.lastElementChild.classList.toggle("summary-popup-skills-tree-content-detail-expanded")
 }
 
-function summaryRemoveStar(targetId, element){
+function summaryRemoveStar(targetId, element, treeId, targetElemId){
   element.parentElement.parentElement.remove()
 
-  markStarRootElem(document.getElementById(targetId));
+  let target = document.getElementById(targetId);
+  if(target) {
+    markStarRootElem(target);
+  } else {
+    let cookieArr = getCookieData()
+    let elems = cookieArr.filter(e=>e.tId ==treeId)[0].elems;
+
+    cookieArr.filter(e=>e.tId == treeId)[0].elems = elems.filter(e=>e != ""+targetElemId)
+    console.log(targetElemId)
+    console.log(cookieArr.filter(e=>e.tId == treeId)[0].elems)
+    setCookie("data", JSON.stringify(cookieArr), 14)
+
+  }
 
 }
 
