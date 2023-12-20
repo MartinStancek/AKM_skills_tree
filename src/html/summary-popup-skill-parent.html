@@ -1,7 +1,14 @@
 <div id="summary-popup-skills-tree-reakcia" class="summary-popup-skills-tree">
     <div class="summary-popup-skills-tree-header">
-        <div include-html="src/html/logo.html"></div>
-        <button class="summary-popup-skills-tree-header-add-skills" onclick="closeSummaryPopup({'srcElement':{'id':'close-popup-area-summary'}})"> 
+        <div id=header-menu-summary-header>
+            <div id=header-menu-summary-icon><img id="header-menu-summary-icon-img" src="src/images/header-menu-summary-icon.png" alt="icon" ></div>    
+            <div id=header-menu-summary-text>
+                <div id=header-menu-summary-app-name>Skills tree</div>  
+                <div id=header-menu-summary-tree-name>%SKILL_TREE_NAME%</div>   
+            </div>  
+        </div>
+
+        <button class="summary-popup-skills-tree-header-add-skills" onclick="redirectToTree('%REDIRECT_LINK%')"> 
             <img class="summary-popup-skills-tree-header-add-skills-img" src="src/images/add-skills.png" alt="logo" >
             <div class="summary-popup-skills-tree-header-add-skills-text">pridať skills</div>
         </button>

@@ -10,29 +10,37 @@ function openSummaryPopup() {
   document.getElementById("connector-lines").style.filter = "blur(6px)";
 
   let skillsTreeParent = document.getElementById("summary-popup-skills-tree-parent");
-  
-  // TODO: iterovat cez vsetky skillstree
-
-  let linesHtml = "";
-  
-  const collection = document.getElementsByClassName("root-active");
-
-  for (let i = 0; i < collection.length; i++) {
-    let data = reakcia.filter(e=>e.name == collection[i].id.replace(/-/g, " "))[0]
-
-    linesHtml+=lineTemplate.replace("%NAME%", data.name)
-                           .replace("%DESCRIPTION%", data.description)
-                           .replace("%DATA_NAME%", collection[i].id)
-  }
-
-  if(linesHtml == ""){
-    linesHtml = '<div class="summary-popup-skills-tree-content-any">Žiadne vybraté skills</div>'
-  }
-
-  const parentHtmlTemplate = new DOMParser().parseFromString(parentTemplate.replace("%LINES%", linesHtml), "text/html");
   skillsTreeParent.innerHTML = ""
-  skillsTreeParent.appendChild(parentHtmlTemplate.body.lastElementChild);
 
+
+  
+
+
+  for (var j = 0; j < treeMetadata.length; j++) {
+    let linesHtml = "";
+    let actualTreeMetadata = treeMetadata[j] 
+    let cookieArr = getCookieData().filter(e=>e.tId ==actualTreeMetadata.id)[0].elems
+    let nodesData = JSON.parse(loadResource(`src/data/${actualTreeMetadata.fileName}`))
+
+    for (let i = 0; i < cookieArr.length; i++) {
+      let data = nodesData.filter(e=>e.id == cookieArr[i])[0]
+      console.log(data);
+
+      linesHtml+=lineTemplate.replace("%NAME%", data.name)
+                             .replace("%DESCRIPTION%", data.description)
+                             .replace("%DATA_NAME%", cookieArr[i])
+    }
+
+    if(linesHtml == ""){
+      linesHtml = '<div class="summary-popup-skills-tree-content-any">Žiadne vybraté skills</div>'
+    }
+
+    const parentHtmlTemplate = new DOMParser().parseFromString(parentTemplate
+                                                                  .replace("%LINES%", linesHtml)
+                                                                  .replace("%REDIRECT_LINK%", actualTreeMetadata.pathName)
+                                                                  .replace("%SKILL_TREE_NAME%", actualTreeMetadata.displayName), "text/html");
+    skillsTreeParent.appendChild(parentHtmlTemplate.body.lastElementChild);
+  }
 
   includeHTML();
 

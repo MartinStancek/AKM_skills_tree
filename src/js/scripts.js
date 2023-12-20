@@ -97,11 +97,12 @@ function includeAttribute(innerHtml){
 
 function generateTree(){
 	const plainTemplate = loadResource("src/html/node.html");
- 	
-	return generateTreeRecursive(/*id=*/1, plainTemplate, reakcia).innerHTML;
+ 	const cookieArr = getCookieData().filter(e=>e.tId ==actualTreeMetadata.id)[0].elems
+
+	return generateTreeRecursive(/*id=*/1, plainTemplate, reakcia, cookieArr).innerHTML;
 }
 
-function generateTreeRecursive(parentId, plainTemplate, data){
+function generateTreeRecursive(parentId, plainTemplate, data, cookiesArr){
 	// console.log("Generating: "+parent.name)
 	let parent = data.filter(function(e){return e.id === parentId})[0];
 	if(!parent) {console.error("Unable to find parent with name "+parentName);}
@@ -111,13 +112,20 @@ function generateTreeRecursive(parentId, plainTemplate, data){
 			.replace("%NODE_ID%", parent.name.replace(/ /g, "-"))
 			.replace("%DATA_ID%", parent.id);
 
+	if(cookiesArr.includes(""+parent.id)){
+		htmlTemplate.body.firstElementChild.firstElementChild.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
+		htmlTemplate.body.firstElementChild.firstElementChild.classList.add("root-active");
+	}
+
 	if(!parent.childs){
 		return htmlTemplate.body;
 	}
 
+
+
 	let childs = htmlTemplate.body.getElementsByClassName("childs")[0];
 	for (var childId of parent.childs) {
-		childs.appendChild(generateTreeRecursive(childId, plainTemplate, data));
+		childs.appendChild(generateTreeRecursive(childId, plainTemplate, data, cookiesArr));
 	}
 
 	return htmlTemplate.body;
@@ -147,14 +155,24 @@ function markStar(element){
 
 function markStarRootElem(root){
 	popEfect(root);
+	console.log(root)
+
+	let cookieArr = getCookieData()
+
+	console.log(cookieArr)
 
 	if(!root.classList.contains("root-active")){
 		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star-active.png");
 		root.classList.add("root-active");
+		cookieArr.filter(e=>e.tId ==actualTreeMetadata.id)[0].elems.push(root.getAttribute("data-id"))
 	} else {
 		root.lastElementChild.firstElementChild.firstElementChild.setAttribute("src", "src/images/star.png");
 		root.classList.remove("root-active");
+		let elems = cookieArr.filter(e=>e.tId ==actualTreeMetadata.id)[0].elems;
+
+		cookieArr.filter(e=>e.tId ==actualTreeMetadata.id)[0].elems = elems.filter(e=>e != root.getAttribute("data-id"))
 	}
+	setCookie("data", JSON.stringify(cookieArr), 14)
 	recalculateStars();
 }
 
@@ -247,4 +265,58 @@ function redirectToTree(treePath) {
 	params.set('t', treePath);
 
 	window.location.search = params.toString();
+}
+
+
+
+
+
+
+
+
+
+
+/*
+ * cookie section
+ */
+function getCookieData(){
+	let cookieData = getCookie("data");
+	if(cookieData == ""){
+		return treeMetadata.map(e=> {return {"tId": e.id, "elems": []}})
+	}
+	return JSON.parse(cookieData);
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 365);
+    }
+  }
 }
