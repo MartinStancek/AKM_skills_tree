@@ -48,7 +48,7 @@ function resolveLines(tree){
 	for(let child of tree.lastElementChild.children){
 		let to = child.firstElementChild.getBoundingClientRect();
 		var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
-		newLine.setAttribute('id','line2');
+		// newLine.setAttribute('id','line2');
 		newLine.setAttribute('x1',(from.right+window.pageXOffset+from.left+window.pageXOffset)/2);
 		newLine.setAttribute('y1',from.bottom+window.pageYOffset);
 		newLine.setAttribute('x2',(to.right+window.pageXOffset+to.left+window.pageXOffset)/2);
