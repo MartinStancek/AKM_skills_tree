@@ -24,9 +24,23 @@ try {
 
     $treeData = json_decode($_POST["jsonData"]);
 
-    for($x = 0; $x < count($treeData); $x++)
-      echo $key . " => " . $value . "<br>";
+    // for($x = 0; $x < count($treeData); $x++) {
+    //   echo $key . " => " . $value . "<br>";
+    // }
+    if(file_exists(__DIR__ . "/../smtp-config.ini")){
+        // echo fileperms(__DIR__ . "/../smtp-config.ini");
     }
+    else {
+        throw new Exception("File {__DIR__}./smtp-config.ini does not exists.");
+    }
+
+    $config = parse_ini_file(__DIR__  . "/../smtp-config.ini", true);
+    // print_r($config);
+    // var_dump($config);
+    if(!$config){
+        throw new Exception("Unable to load mail configuration.");
+    }
+    // echo json_encode($config);
 
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
@@ -35,19 +49,19 @@ try {
     //Server settings
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.m1.websupport.sk';                //Set the SMTP server to send through
+    $mail->Host       = $config['smtp']['host'];                //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'skillstrees@kritickemyslenie.sk';      //SMTP username
-    $mail->Password   = '';                           //SMTP password
+    $mail->Username   = $config['smtp']['login'];      //SMTP username
+    $mail->Password   = $config['smtp']['password'];                           //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
+    $mail->setFrom($config['smtp']['emailFrom'], $config['smtp']['nameFrom']);
     $mail->addAddress($_POST["email"], $_POST["name"]);     //Add a recipient //Name is optional
     // $mail->addReplyTo('skillstrees@kritickemyslenie.sk', 'Information');
     if(isset($_POST['contact-back']) == "on"){
-        $mail->addBcc('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
+        $mail->addBcc($config['smtp']['bccAddress']);
     }
 
     //Attachments
@@ -57,7 +71,7 @@ try {
     //Content
     // $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Sumarizácia skills';
-    // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     $mail->CharSet = "UTF-8";
 

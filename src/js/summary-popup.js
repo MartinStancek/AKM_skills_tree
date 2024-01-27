@@ -37,7 +37,7 @@ function sendEmail(event){
 
 
 
-  var params = `name=${name}&email=${email}"&contact-back=${contactBack?"on":"off"}&jsonData=${jsonData}`;
+  var params = `name=${name}&email=${email}&contact-back=${contactBack?"on":"off"}&jsonData=${jsonData}`;
   http.open('POST', url, true);
 
   //Send the proper header information along with the request
