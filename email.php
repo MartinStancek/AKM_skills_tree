@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="src/css/email.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-</head>
-<body>
 <?php
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -22,27 +14,33 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 // require 'vendor/autoload.php';
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
 
 try {
+    if($_SERVER['REQUEST_METHOD'] != "POST"){
+        throw new Exception("Http method {$_SERVER['REQUEST_METHOD']} is not allowed");
+    }
+
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+
+
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp.m1.websupport.sk';                //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'skillstrees@kritickemyslenie.sk';      //SMTP username
     $mail->Password   = 'Ko062p9kS&';                           //SMTP password
-    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
+    $mail->setFrom('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
+    $mail->addAddress($_POST["email"], $_POST["name"]);     //Add a recipient //Name is optional
+    // $mail->addReplyTo('skillstrees@kritickemyslenie.sk', 'Information');
+    if(isset($_POST['contact-back']) == 1){
+        $mail->addCc('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
+    }
 
     //Attachments
     // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -50,7 +48,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
+    $mail->Subject = 'Sumarizácia skills';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -58,10 +56,11 @@ try {
     // echo 'Message has been sent';
     $resultMessage = "Úspech";
 } catch (Exception $e) {
-    $errorMessage = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     $resultMessage = "Chyba aplikácie";
+    $errorMessage = "Message could not be sent. Mailer Error: {$mail->ErrorInfo} <br><br> Detailed message: <br> {$e->getMessage()}";
 }
 ?>
+
 	<div id="send-email-content">
 		<div id="send-email-header"> <?php echo $resultMessage?></div>
 		<div id="send-email-message"> Na emailovu adresu <b><i><?php echo $_POST["email"]?></i></b> <?php echo $resultMessage == 'Úspech' ? 'bol odoslany' : "sa nepodarilo odoslať" ?> email s vyplnenymi udajmi. </div>
@@ -86,8 +85,5 @@ try {
 // echo '<br>';
 // echo '<br>';
 // ?>
-
-</body>
-</html>
 
 

@@ -248,7 +248,7 @@
 }
 
 
-#summary-popup-mail-box-submit {
+.summary-popup-mail-box-submit-active {
   font-family: 'Quicksand';
   height: 50px;
   border-radius: 15px;
@@ -259,12 +259,25 @@
   padding: 0 20px;
   transition-duration:0.5s;
   cursor: pointer;
-
 }
-#summary-popup-mail-box-submit:hover {
+.summary-popup-mail-box-submit-active:hover {
   transform:scale(1.05);
   transition-duration:0.5s;
 }
+
+.summary-popup-mail-box-submit-disabled {
+  font-family: 'Quicksand';
+  height: 50px;
+  border-radius: 15px;
+  background-color: gray;
+  border: 0;
+  font-weight: 700;
+  color: white;
+  padding: 0 20px;
+  cursor: no-drop;
+}
+
+
 
 #summary-popup-mail-box-contact-back-checkbox {
   width: 30px;

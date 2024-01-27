@@ -3,11 +3,84 @@ document.querySelector('#close-popup-area-summary').onclick = closeSummaryPopup;
 const lineTemplate = loadResource("src/html/summary-popup-skill-line.html");
 const parentTemplate = loadResource("src/html/summary-popup-skill-parent.html");
 
+function sendEmail(event){
+  event.preventDefault();
+  document.getElementById('summary-popup-mail-box-submit').classList.remove("summary-popup-mail-box-submit-active");
+  document.getElementById('summary-popup-mail-box-submit').classList.add("summary-popup-mail-box-submit-disabled");
+  document.getElementById('summary-popup-mail-box-submit').disabled="disabled";
+
+  var http = new XMLHttpRequest();
+  var url = 'email.php';
+  var name = document.getElementById('summary-popup-mail-box-name').value;
+  var email = document.getElementById('summary-popup-mail-box-email').value;
+  var contactBack = document.getElementById('summary-popup-mail-box-contact-back-checkbox').checked;
+  var jsonData = JSON.stringify(getCookieData());
+  console.log("url="+url);
+  console.log("name="+name);
+  console.log("email="+email);
+  console.log("contactBack="+contactBack);
+  console.log("jsonData="+jsonData);
+
+  if(isBlank(name)){
+    alert("Je potrebné zadať meno");
+    return;
+  }
+
+  if(isBlank(email)){
+    alert("Je potrebné zadať emailovú adresu");
+    return;
+  }
+  if(!isValidEmail(email)){
+    alert("Je potrebné zadať validnú emailovú adresu");
+    return;
+  }
+
+
+
+  var params = `name=${name}&email=${email}"&contact-back=${contactBack?"on":"off"}&jsonData=${jsonData}`;
+  http.open('POST', url, true);
+
+  //Send the proper header information along with the request
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+        document.getElementById("summary-popup-skills-result").style.display = "block";
+        document.getElementById("summary-popup-skills-text").style.display = "none";
+        document.getElementById("summary-popup-skills-tree-parent").style.display = "none";
+        document.getElementById("summary-popup-skills-result").innerHTML = http.responseText;
+      } else if (http.readyState == 4){
+        alert("Chyba odoslania emailu. Skúste to prosím neskôr.")
+      }
+  }
+  http.send(params);
+
+}
+
+function isBlank(str) {
+    return (!str || /^\s*$/.test(str));
+}
+function isValidEmail(email) {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+
+
 
 function openSummaryPopup() {
   document.getElementById("close-popup-area-summary").style.display = "block";
   document.getElementById("tree-structrure-content").style.filter = "blur(6px)";
   document.getElementById("connector-lines").style.filter = "blur(6px)";
+  document.getElementById("summary-popup-skills-result").style.display = "none";
+  document.getElementById("summary-popup-skills-text").style.display = "block";
+  document.getElementById("summary-popup-skills-tree-parent").style.display = "block";
+  document.getElementById('summary-popup-mail-box-submit').classList.remove("summary-popup-mail-box-submit-disabled");
+  document.getElementById('summary-popup-mail-box-submit').classList.add("summary-popup-mail-box-submit-active");
+  document.getElementById('summary-popup-mail-box-submit').disabled=undefined;
 
   let skillsTreeParent = document.getElementById("summary-popup-skills-tree-parent");
   skillsTreeParent.innerHTML = ""
