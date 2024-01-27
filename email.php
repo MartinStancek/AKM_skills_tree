@@ -20,17 +20,25 @@ try {
         throw new Exception("Http method {$_SERVER['REQUEST_METHOD']} is not allowed");
     }
 
+    $jsonobj = $_POST["email"];
+
+    $treeData = json_decode($_POST["jsonData"]);
+
+    for($x = 0; $x < count($treeData); $x++)
+      echo $key . " => " . $value . "<br>";
+    }
+
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
 
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.m1.websupport.sk';                //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'skillstrees@kritickemyslenie.sk';      //SMTP username
-    $mail->Password   = 'Ko062p9kS&';                           //SMTP password
+    $mail->Password   = '';                           //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -38,8 +46,8 @@ try {
     $mail->setFrom('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
     $mail->addAddress($_POST["email"], $_POST["name"]);     //Add a recipient //Name is optional
     // $mail->addReplyTo('skillstrees@kritickemyslenie.sk', 'Information');
-    if(isset($_POST['contact-back']) == 1){
-        $mail->addCc('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
+    if(isset($_POST['contact-back']) == "on"){
+        $mail->addBcc('skillstrees@kritickemyslenie.sk', 'KritickeMyslenie.sk');
     }
 
     //Attachments
@@ -47,10 +55,11 @@ try {
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
+    // $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Sumarizácia skills';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->CharSet = "UTF-8";
 
     $mail->send();
     // echo 'Message has been sent';
@@ -66,7 +75,7 @@ try {
 		<div id="send-email-message"> Na emailovu adresu <b><i><?php echo $_POST["email"]?></i></b> <?php echo $resultMessage == 'Úspech' ? 'bol odoslany' : "sa nepodarilo odoslať" ?> email s vyplnenymi udajmi. </div>
 		<div id="send-email-name"> Vase meno: <?php echo $_POST["name"]?></div>
 		<div id="send-email-contact"> <?php echo isset($_POST['contact-back']) == 1 ? "Budeme vas kontaktovat" : "Vzhladom na to ze ste nezaciarkli suhlas so spatnym kontaktovanim, mozne nas pripade otazok kontaktovat na emailovu adresu aaa@blabla.sk";?>
-		<div id="send-email-button"><a href="/">Späť na domovskú obrazovku</a></div>
+		<button id="send-email-button" onclick="closeSummaryPopup({'srcElement':{'id':'close-popup-area-summary'}})">Zavrieť</button>
 		<div id="send-email-error"> <?php echo $errorMessage?> </div>
 
 	</div>
