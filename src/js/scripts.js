@@ -10,7 +10,7 @@ if(params.get('t') == null) {
 	const hash = window.location.hash;
 
 	// Update query string values
-	params.set('t', treeMetadata.filter(e=>e.id = 1)[0].pathName);
+	params.set('t', treeMetadata.filter(e=>e.id == 1)[0].pathName);
 
 	// Encode URL
 	// numerical=123&string=yummy&multiple=a%2Cb%2Cc&foreignChar=%C3%A9

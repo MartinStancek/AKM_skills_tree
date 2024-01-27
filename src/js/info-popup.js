@@ -15,14 +15,14 @@ function openInfoPopup(element) {
   if(!element.classList.contains("root-active")){
     document.getElementById("info-popup-star-button").classList.remove("info-popup-star-button-active");
     document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star.png");
+    document.getElementById("info-popup-star-button-text").innerHTML = "Označiť";
 
   } else {
     document.getElementById("info-popup-star-button").classList.add("info-popup-star-button-active");
     document.getElementById("info-popup-star-button-star").setAttribute("src", "src/images/star-active.png");
-
+    document.getElementById("info-popup-star-button-text").innerHTML = "Vymazať";
   }
   document.getElementById("popupInfo").setAttribute("target-id", element.id)
-  document.getElementById("info-popup-star-button-text").innerHTML =element.style["background-color"] == "" ? "Označiť" : "Vymazať";
 
 
   targetNode = reakcia.filter(function(e){return e.name === element.id.replace(/-/g, " ")})[0];

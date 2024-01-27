@@ -8,27 +8,28 @@
   padding-right: 10%;
   margin-top: 10px;
   display: flex;
+  align-items: center;
 
 }
 
 #header-menu-logo {
 /*	border: 1px solid black;*/
 	width: 33%;
-	height: 80px;
+	height: 100%;
 	padding-top: 10px;
   padding-bottom: 10px;
   min-width: 180px;
 }
 
 #header-menu-logo-img{
-	height: 100%;
+	height: 80px;
 }
 
 #header-menu-summary {
 /*	border: 1px solid black;*/
 	border-radius:20px;
 	width: 34%;
-	height: 80px;
+	height: 100%;
 	padding-top: 10px;
   	padding-bottom: 10px;
 	background-color: white;
@@ -74,7 +75,7 @@
 }
 
 #header-menu-summary-tree-name {
-	font-size: 25px;
+	font-size: 23px;
 	text-align: left;
 	font-weight: 700;
 		font-family:'Quicksand';

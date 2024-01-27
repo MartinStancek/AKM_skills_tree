@@ -6,6 +6,7 @@
   border: none;
   border-radius: 20px;
   min-height: 600px; /* Need a specific value to work */
+  min-width: 300px;
   cursor: auto;
   box-shadow: 0 0 200px black;
   padding-bottom: 10%;
@@ -20,8 +21,8 @@
   transform: translateX(-50%);
   top: 10%;
   max-width: 600px; /* Need a specific value to work */
-  padding-left: 10%;
-  padding-right: 10%;  
+  padding-left: 2%;
+  padding-right: 2%;  
   padding-bottom: 100px;
   z-index: 20;
 }
@@ -81,6 +82,7 @@
   display: flex;
   margin-left: 10%;
   margin-right: 10%;
+  flex-wrap: wrap;
 }
 .summary-popup-skills-tree-header-add-skills {
   display: flex;
@@ -159,7 +161,10 @@
 .summary-popup-skills-tree-content-line-colapsed {
   display: flex;
 
-  height: 50px;
+  height: 100%;
+  margin-bottom: 12px;
+  margin-top: 12px;
+
 }
 
 .summary-popup-skills-tree-content-line-delete {
@@ -220,20 +225,24 @@
 #summary-popup-mail-box-name-email {
   display: flex;
   margin-bottom: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #summary-popup-mail-box-name {
   width: 45%;
   height: 30px;
-  margin-right: auto;
+  min-width: 180px;
+/*  margin-right: auto;*/
   border-radius: 8px;
 
 }
 
 #summary-popup-mail-box-email {
   width: 45%;
-  margin-left: auto;
+/*  margin-left: auto;*/
   height: 30px;
+  min-width: 180px;
   border-radius: 8px;
   background: white;
 }
