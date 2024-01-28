@@ -13,20 +13,56 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 // require 'vendor/autoload.php';
-
-
+$treesLabels = json_decode(file_get_contents(__DIR__ . "/src/data/trees.json"));
 try {
     if($_SERVER['REQUEST_METHOD'] != "POST"){
         throw new Exception("Http method {$_SERVER['REQUEST_METHOD']} is not allowed");
     }
 
-    $jsonobj = $_POST["email"];
-
     $treeData = json_decode($_POST["jsonData"]);
 
-    // for($x = 0; $x < count($treeData); $x++) {
-    //   echo $key . " => " . $value . "<br>";
-    // }
+
+    $mailBody = "<h2>Sumarizácia skills: </h2>";
+    $mailAltBody = "Sumarizácia skills:\r\n\r\n";
+    /*array(2) { 
+    [0]=> object(stdClass)#1 (2) { ["tId"]=> int(1) ["elems"]=> array(3) { [0]=> string(1) "1" [1]=> string(1) "5" [2]=> string(1) "2" } } 
+    [1]=> object(stdClass)#2 (2) { ["tId"]=> int(1) ["elems"]=> array(0) { } } }
+*/
+    foreach ($treeData as &$treeObj) {
+        $treeObjResolved = NULL;
+        foreach ($treesLabels as &$treesLabelsObj) {
+            if($treesLabelsObj->id == $treeObj->tId){
+                $treeObjResolved = $treesLabelsObj;
+                break;
+            }
+        }
+        $treeInfoArr = json_decode(file_get_contents(__DIR__ . "/src/data/" . $treeObjResolved->fileName));
+
+
+        $mailBody .="<h3>" . $treeObjResolved->displayName . "</h3>";
+        $mailAltBody .= $treeObjResolved->displayName . "\r\n";
+        $mailBody .="<ul>";
+
+
+        foreach ($treeObj->elems as &$treeId) {
+            $treeInfoResolved = NULL;
+            foreach ($treeInfoArr as &$treeInfoObj) {
+                if($treeInfoObj->id == $treeId){
+                    $treeInfoResolved = $treeInfoObj;
+                    break;
+                }
+            }
+
+
+            $mailBody .="<li>" . $treeInfoResolved->name . "</li>";
+            $mailAltBody .= "\t- " . $treeInfoResolved->name . "\r\n";
+
+        }
+        $mailBody .="</ul>";
+        $mailAltBody .= "\r\n";
+        // $mailBody .="<br><br>";
+
+    }
     if(file_exists(__DIR__ . "/../smtp-config.ini")){
         // echo fileperms(__DIR__ . "/../smtp-config.ini");
     }
@@ -69,10 +105,10 @@ try {
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
     //Content
-    // $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Sumarizácia skills';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Body    = $mailBody;
+    $mail->AltBody = $mailAltBody;
     $mail->CharSet = "UTF-8";
 
     $mail->send();
